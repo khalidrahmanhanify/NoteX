@@ -22,7 +22,7 @@ const description =
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css"
@@ -31,7 +31,15 @@ const description =
     <title>{title}</title>
   </head>
   <body>
-    <Nav />
-    <slot />
+    <main class="wrapper">
+      <Nav />
+      <slot />
+    </main>
   </body>
 </html>
+
+<style>
+  main {
+    padding-top: 80px;
+  }
+</style>
