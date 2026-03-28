@@ -1,0 +1,37 @@
+---
+import "../styles/global.css";
+import Nav from "./Nav.astro";
+// 1. Get both sources of props
+const {
+  frontmatter,
+  title: directTitle,
+  description: directDescription,
+} = Astro.props;
+
+const websiteName = "NoteX";
+// 2. Prioritize direct props, then frontmatter, then a default value
+const title =
+  directTitle + " | " + websiteName || frontmatter?.title || "Default Title";
+const description =
+  directDescription || frontmatter?.description || "Default Description";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css"
+    />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Nav />
+    <slot />
+  </body>
+</html>

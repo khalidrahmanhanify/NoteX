@@ -1,0 +1,172 @@
+---
+import BaseLayout from "@/components/BaseLayout.astro";
+import type { GetStaticPaths } from "astro";
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+import NoteCard from "@/components/NoteCard.astro";
+import BackButton from "@/components/BackButton.astro";
+
+export const getStaticPaths = (async () => {
+  const semesters = await getCollection("semesters");
+
+  const paths = [];
+
+  for (const semester of semesters) {
+    for (const subject of semester.data.subjects) {
+      const subjectSlug = subject.path.split("/").filter(Boolean).pop();
+
+      paths.push({
+        params: {
+          slug: semester.data.slug,
+          subject: subjectSlug,
+        },
+        props: {
+          semester,
+          subject,
+        },
+      });
+    }
+  }
+
+  return paths;
+}) satisfies GetStaticPaths;
+const { slug } = Astro.params;
+const { semester, subject } = Astro.props;
+const notes = await getCollection("notes", (note) => {
+  const formattedSubject = subject.subjectName
+    .toLowerCase()
+    .split(" ")
+    .join("-");
+  return note.data.subject === formattedSubject && semester.data.slug === slug;
+});
+
+const coursePolicy = subject.materials[0];
+const slides = subject.materials.slice(1);
+const pathname = Astro.url.pathname;
+const previousPage =
+  "/" + pathname.split("/").filter(Boolean).slice(0, -1).join("/");
+---
+
+<BaseLayout title={subject.subjectName}>
+  <BackButton path={previousPage} />
+  <div class="container">
+    <h1 class="page-title subject-title">{subject.subjectName}</h1>
+    <div class="download-section">
+      <div class="download-group">
+        <h3 class="group-title">Documents</h3>
+        <hr class="hr" />
+        <a href={coursePolicy.file} class="download-card">
+          <span class="icon">✅</span>
+          <div class="text">
+            <span class="name">Course Policy</span>
+            <span class="sub">Click to Download PDF</span>
+          </div>
+          <span class="dl-icon"> ⬇️ </span>
+        </a>
+      </div>
+      <div class="download-group">
+        <h3 class="group-title">Lecture Slides</h3>
+        <hr class="hr" />
+        <div class="slides-list">
+          {
+            slides.map((slide) => (
+              <a href={slide.file} class="download-card">
+                <span class="icon">📊</span>
+                <div class="text">
+                  <span class="name">{slide.title}</span>
+                  <span class="sub">
+                    {slide.date
+                      ? slide.date.toLocaleDateString("en-GB", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })
+                      : "No date provided"}
+                  </span>
+                </div>
+                <span class="dl-icon"> ⬇️ </span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <h2 class="lectures">Lectures</h2>
+    <hr class="hr" />
+    <div class="note-grid">
+      {notes.map((note) => <NoteCard {note} />)}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .subject-title {
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-size: 32px;
+  }
+  .group-title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--divider);
+    padding-bottom: 8px;
+    margin: 32px 0 0;
+    letter-spacing: -0.01em;
+    line-height: 28px;
+  }
+  .download-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none !important;
+    transition: all 0.2s;
+    margin-bottom: 8px;
+  }
+
+  .download-card:hover {
+    border-color: var(--accent);
+    transform: translateX(5px);
+  }
+  .hr {
+    margin-bottom: 16px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+  }
+  .name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+  }
+  .sub {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  .dl-icon {
+    opacity: 0.5;
+    font-size: 14px;
+  }
+  .note-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .lectures {
+    margin: 48px 0 16px;
+    padding-top: 24px;
+    letter-spacing: -0.02em;
+    line-height: 32px;
+    font-size: 24px;
+  }
+</style>

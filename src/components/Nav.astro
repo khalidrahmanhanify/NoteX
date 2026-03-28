@@ -1,0 +1,120 @@
+---
+import "@/styles/global.css";
+// import Icon from "astro-icon/components";
+import { Icon } from "astro-icon/components";
+---
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="/">NoteX</a>
+    </div>
+    <div class="theme-toggler">
+      <!-- Desktop Theme Toggler -->
+      <button class="theme-toggle-desktop" aria-label="Toggle dark mode">
+        <div class="circle">
+          <!-- Give these a generic class for the CSS to target -->
+          <Icon name="sun" class="icon icon-sun" />
+          <Icon name="moon" class="icon icon-moon" />
+        </div>
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    border-bottom: 1px solid var(--divider);
+  }
+  header div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px; /* Use min-height instead of height */
+    padding: 10px 0; /* Add vertical padding for breathing room */
+  }
+
+  .logo {
+    font-weight: bold;
+    white-space: nowrap; /* Prevents logo from breaking into two lines */
+    font-size: 1.1rem;
+  }
+
+  .theme-toggle-desktop {
+    width: 44px;
+    height: 24px;
+    background-color: var(--card);
+    position: relative;
+    border-radius: 100px;
+    border: 1px solid var(--divider);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0; /* Ensures no internal padding blocks the circle */
+  }
+
+  .theme-toggle-desktop .circle {
+    position: absolute;
+    top: 2px;
+    left: 2px; /* Fixed starting point */
+    height: 18px;
+    width: 18px;
+    background-color: var(
+      --divider
+    ); /* Contrast against the toggle background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Use transform for smoother movement */
+  }
+
+  /* Move the circle using translateX - this is more reliable for animations */
+  :global(.dark) .circle {
+    transform: translateX(20px);
+  }
+
+  /* Icon visibility */
+  .icon {
+    transform: translateX(0);
+    color: var(--text-primary);
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    transition: 1s;
+  }
+
+  .icon-moon {
+    display: none;
+  }
+  .icon-sun {
+    display: block;
+  }
+
+  :global(.dark) .icon-sun {
+    display: none;
+  }
+  :global(.dark) .icon-moon {
+    display: block;
+  }
+</style>
+
+<script is:inline>
+  const html = document.documentElement;
+  const desktopButton = document.querySelector(".theme-toggle-desktop");
+
+  // 1. SET INITIAL THEME
+  const savedTheme = localStorage.getItem("theme");
+  const systemPrefersDark = window.matchMedia(
+    "(prefers-color-scheme: dark)",
+  ).matches;
+
+  if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+    html.classList.add("dark");
+  }
+
+  // 2. TOGGLE LOGIC
+  desktopButton?.addEventListener("click", () => {
+    const isDark = html.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>

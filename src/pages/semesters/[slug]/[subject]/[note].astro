@@ -1,0 +1,291 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "@/components/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+import BackButton from "@/components/BackButton.astro";
+
+export const getStaticPaths = (async () => {
+  const notes = await getCollection("notes");
+  return notes.map((note) => ({
+    params: {
+      slug: note.data.semester,
+      subject: note.data.subject,
+      note: note.data.lecture.toLowerCase().split(" ").join("-"),
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const pathname = Astro.url.pathname;
+const previousPage =
+  "/" + pathname.split("/").filter(Boolean).slice(0, -1).join("/");
+const { slug, subject, note } = Astro.params;
+
+const notes = await getCollection("notes", (currNote) => {
+  return (
+    currNote.data.lecture.toLowerCase().split(" ").join("-") == note &&
+    currNote.data.semester == slug &&
+    currNote.data.subject == subject
+  );
+});
+
+const currNote = notes[0];
+const { Content } = await render(currNote);
+
+// Detect language for direction
+const isRTL = /[\u0600-\u06FF]/.test(currNote.body ?? "");
+const direction = isRTL ? "rtl" : "ltr";
+---
+
+<BaseLayout title={currNote.data.title}>
+  <div class="note-page-wrapper">
+    <BackButton path={previousPage} />
+    <article class="markdown-body container" dir={direction}>
+      <Content />
+    </article>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  /* 1. Layout & Container */
+  .note-page-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .markdown-body {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    word-wrap: break-word;
+    text-align: start;
+  }
+
+  /* 2. Typography */
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3 {
+    color: var(--text-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+  .markdown-body h1 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid var(--hr);
+    padding-bottom: 0.5rem;
+  }
+  .markdown-body h2 {
+    font-size: 1.7rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.3rem;
+  }
+
+  .markdown-body strong {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .markdown-body a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+  }
+
+  /* 3. Lists & Tables */
+  .markdown-body ul,
+  .markdown-body ol {
+    padding-inline-start: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .markdown-body li {
+    margin-bottom: 0.5rem;
+  }
+  /* Desktop & Base Table Styling */
+  .markdown-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--card);
+    overflow: hidden; /* Keeps corners rounded */
+  }
+
+  .markdown-body th,
+  .markdown-body td {
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    text-align: start;
+  }
+
+  .markdown-body th {
+    background-color: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* --- MOBILE TRANSFORMATION (Stacked Labels) --- */
+  @media (max-width: 768px) {
+    .markdown-body table,
+    .markdown-body thead,
+    .markdown-body tbody,
+    .markdown-body th,
+    .markdown-body td,
+    .markdown-body tr {
+      display: block; /* Break the table grid */
+    }
+
+    /* Hide the original header row but keep it for screen readers */
+    .markdown-body thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    .markdown-body tr {
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--card);
+      padding: 0.5rem;
+    }
+
+    .markdown-body td {
+      border: none;
+      position: relative;
+      padding-inline-start: 40%; /* Create space for the label */
+      text-align: start;
+      border-bottom: 1px solid var(--accent-soft);
+    }
+
+    .markdown-body td:last-child {
+      border-bottom: none;
+    }
+
+    /* Injects the Header Title before the cell content */
+    .markdown-body td::before {
+      content: attr(data-label); /* We will add this via JS below */
+      position: absolute;
+      inset-inline-start: 12px;
+      width: 35%;
+      white-space: nowrap;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+  }
+
+  /* 4. Code Blocks (Using your --code variable) */
+  .astro-code {
+    position: relative;
+    padding: 1.5rem !important;
+    border-radius: 12px;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    background-color: var(--code) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 5. Copy Button */
+  .copy-code-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    background: var(--background);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 10;
+  }
+  [dir="rtl"] .copy-code-btn {
+    right: auto;
+    left: 0.75rem;
+  }
+  .astro-code:hover .copy-code-btn {
+    opacity: 1;
+  }
+  .copy-code-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  .copy-code-btn.copied {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+  }
+
+  /* 6. HR & Spacing */
+  .markdown-body hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--hr), transparent);
+    margin: 4rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .note-page-wrapper {
+      padding: 1rem 0.5rem;
+    }
+    .markdown-body h1 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<script>
+  const codeBlocks = document.querySelectorAll(".astro-code");
+  codeBlocks.forEach((block) => {
+    const button = document.createElement("button");
+    button.className = "copy-code-btn";
+    button.innerHTML = "Copy";
+
+    // Ensure block is relative for absolute button positioning
+    if (getComputedStyle(block).position === "static") {
+      (block as HTMLElement).style.position = "relative";
+    }
+
+    block.appendChild(button);
+
+    button.addEventListener("click", async () => {
+      const code = block.querySelector("code")?.innerText || "";
+      await navigator.clipboard.writeText(code);
+
+      button.innerHTML = "Copied!";
+      button.classList.add("copied");
+
+      setTimeout(() => {
+        button.innerHTML = "Copy";
+        button.classList.remove("copied");
+      }, 2000);
+    });
+  });
+  // Select all tables in the markdown content
+  const tables = document.querySelectorAll(".markdown-body table");
+
+  tables.forEach((table) => {
+    const headers = Array.from(table.querySelectorAll("th")).map(
+      (th) => th.innerText,
+    );
+    const rows = table.querySelectorAll("tbody tr");
+
+    rows.forEach((row) => {
+      const cells = row.querySelectorAll("td");
+      cells.forEach((cell, index) => {
+        // Add the 'data-label' attribute so CSS can display it on mobile
+        if (headers[index]) {
+          cell.setAttribute("data-label", headers[index]);
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,106 @@
+---
+import BaseLayout from "@/components/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const semesters = await getCollection("semesters");
+---
+
+<BaseLayout
+  title="My University Notes"
+  description="In this website I share all of my universitie's notes."
+>
+  <section class="container">
+    <h1 class="page-heading">My University Notes</h1>
+    <hr class="hr" />
+    <h2 class="page-subheading">Semesters</h2>
+    <div class="semester-cards">
+      {
+        semesters.map((semester) => (
+          <a href={semester.data.url} class="semester-card">
+            <div
+              class="top-bar"
+              style={`--bar-color: ${semester.data.barColor}`}
+            />
+            <div class="card-content">
+              <h3 class="semester-name">{semester.data.semesterName}</h3>
+              <div class="data-row">
+                <div class="data-group">
+                  <span class="label">Credits</span>
+                  <span class="value">{semester.data.credits}</span>
+                </div>
+                <div class="data-group">
+                  <span class="label">Total Fee</span>
+                  <span class="value">
+                    {(semester.data.credits * 2800 + 1000).toLocaleString() +
+                      " AFN"}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  section.container {
+    padding: 30px 0;
+  }
+
+  .semester-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 2rem;
+  }
+  .semester-card {
+    background: var(--card);
+    border: 1px solid #2e2e32;
+    border-radius: 8px;
+    text-decoration: none;
+    transform: translateY(0);
+    transition: all 0.2s ease;
+    overflow: hidden;
+  }
+  .semester-card:hover {
+    border-color: #a8b1ff;
+    transform: translateY(-2px);
+  }
+  .top-bar {
+    height: 4px;
+    width: 100%;
+    background-color: var(--bar-color);
+  }
+  .semester-card .card-content {
+    padding: 20px;
+  }
+  .semester-name {
+    margin-bottom: 16px;
+    padding-top: 24px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .data-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .data-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-gray);
+  }
+</style>

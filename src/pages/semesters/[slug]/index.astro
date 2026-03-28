@@ -1,0 +1,50 @@
+---
+import "@/styles/global.css";
+import type { GetStaticPaths } from "astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "@/components/BaseLayout.astro";
+import { getEntry } from "astro:content";
+import SubjectCard from "@/components/SubjectCard.astro";
+import BackButton from "@/components/BackButton.astro";
+
+export const getStaticPaths = (async () => {
+  const semesters = await getCollection("semesters");
+  return semesters.map((semester: CollectionEntry<"semesters">) => ({
+    params: {
+      slug: semester.data.slug,
+    },
+    props: {
+      semester,
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+const semester = await getEntry("semesters", slug);
+if (!semester) {
+  return new Response(404);
+}
+
+const subjects = semester.data.subjects;
+---
+
+<BaseLayout title={semester.data.semesterName}>
+  <BackButton path="/" />
+  <section class="container">
+    <h1 class="page-heading">{semester.data.semesterName}</h1>
+    <hr class="hr" />
+    <h2 class="page-subheading">Subjects</h2>
+    <div class="subject-cards">
+      {subjects.map((subject) => <SubjectCard {subject} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .subject-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 1.5rem;
+  }
+</style>

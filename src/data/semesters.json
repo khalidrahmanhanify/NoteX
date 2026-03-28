@@ -1,0 +1,700 @@
+[
+  {
+    "semesterName": "Semester 1",
+    "slug": "semester-1",
+    "url": "semesters/semester-1",
+    "credits": 17,
+    "barColor": "rgb(62, 175, 124)",
+    "subjects": [
+      {
+        "subjectName": "Biography of Prophet (PBUH)",
+        "coverImage": "/images/subjectsCovers/biography-of-prophet-pbuh.jpg",
+        "iconName": "moon",
+        "teacher": "Abdulhaq Haqyar",
+        "location": "Room 502",
+        "day": "saturday",
+        "path": "/semester-2/biography-of-prophet-pbuh/",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-2/object-oriented-programming/course-policy.pdf"
+          },
+          {
+            "title": "Slide",
+            "file": "/materials/semester-2/object-oriented-programming/lecture-1.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "semesterName": "Semester 2",
+    "slug": "semester-2",
+    "url": "semesters/semester-2",
+    "credits": 21,
+    "barColor": "rgb(62, 142, 175)",
+    "subjects": [
+      {
+        "subjectName": "Biography of Prophet PBUH",
+        "teacher": "Abdulhaq Haqyar",
+        "day": "Saturday",
+        "location": "306",
+        "coverImage": "/images/subjectsCovers/biography-of-prophet-pbuh.jpg",
+        "path": "/semesters/semester-2/biography-of-prophet-pbuh/",
+        "iconName": "biography",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-1.pdf",
+            "date": "2025-08-16"
+          },
+          {
+            "title": "Lecture 2",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-2.pdf",
+            "date": "2025-08-23"
+          },
+          {
+            "title": "Lecture 3",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-3.pdf",
+            "date": "2025-08-30"
+          },
+          {
+            "title": "Lecture 4",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-4.pdf",
+            "date": "2025-09-06"
+          },
+          {
+            "title": "Lecture 5",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-5.pdf",
+            "date": "2025-09-13"
+          },
+          {
+            "title": "Lecture 6",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-6.pdf",
+            "date": "2025-09-20"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-7.pdf",
+            "date": "2025-09-27"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-8.pdf",
+            "date": "2025-10-04"
+          },
+          {
+            "title": "Lecture 9",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-9.pdf",
+            "date": "2025-10-25"
+          },
+          {
+            "title": "Lecture 10",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-10.pdf",
+            "date": "2025-11-01"
+          },
+          {
+            "title": "Lecture 11",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-11.pdf",
+            "date": "2025-11-08"
+          },
+          {
+            "title": "Lecture 12",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-12.pdf",
+            "date": "2025-11-15"
+          },
+          {
+            "title": "Lecture 13",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-13.pdf",
+            "date": "2025-11-22"
+          },
+          {
+            "title": "Lecture 14",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-14.pdf",
+            "date": "2025-11-29"
+          },
+          {
+            "title": "Lecture 15",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-15.pdf",
+            "date": "2025-12-06"
+          },
+          {
+            "title": "Lecture 16",
+            "file": "/materials/semester-2/biography-of-prophet-pbuh/lecture-16.pdf",
+            "date": "2025-12-13"
+          }
+        ]
+      },
+      {
+        "subjectName": "Worship System of Islam",
+        "teacher": "Abdulhaq Haqhar",
+        "day": "Saturday",
+        "location": "306",
+        "coverImage": "/images/subjectsCovers/worship-system-of-islam.jpg",
+        "path": "/semesters/semester-2/worship-system-of-islam/",
+        "iconName": "worship",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-2/worship-system-of-islam/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-1.pdf",
+            "date": "2025-08-16"
+          },
+          {
+            "title": "Lecture 2",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-2.pdf",
+            "date": "2025-08-23"
+          },
+          {
+            "title": "Lecture 3",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-3.pdf",
+            "date": "2025-08-30"
+          },
+          {
+            "title": "Lecture 4",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-4.pdf",
+            "date": "2025-09-06"
+          },
+          {
+            "title": "Lecture 5",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-5.pdf",
+            "date": "2025-09-13"
+          },
+          {
+            "title": "Lecture 6",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-6.pdf",
+            "date": "2025-09-20"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-7.pdf",
+            "date": "2025-09-27"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-8.pdf",
+            "date": "2025-10-04"
+          },
+          {
+            "title": "Lecture 9",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-9.pdf",
+            "date": "2025-10-25"
+          },
+          {
+            "title": "Lecture 10",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-10.pdf",
+            "date": "2025-11-01"
+          },
+          {
+            "title": "Lecture 11",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-11.pdf",
+            "date": "2025-11-08"
+          },
+          {
+            "title": "Lecture 12",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-12.pdf",
+            "date": "2025-11-15"
+          },
+          {
+            "title": "Lecture 13",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-13.pdf",
+            "date": "2025-11-22"
+          },
+          {
+            "title": "Lecture 14",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-14.pdf",
+            "date": "2025-11-29"
+          },
+          {
+            "title": "Lecture 15",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-15.pdf",
+            "date": "2025-12-06"
+          },
+          {
+            "title": "Lecture 16",
+            "file": "/materials/semester-2/worship-system-of-islam/lecture-16.pdf",
+            "date": "2025-12-13"
+          }
+        ]
+      },
+      {
+        "subjectName": "Principles of Software Engineering",
+        "teacher": "Mashal Rokhan",
+        "day": "Sunday",
+        "location": "402",
+        "coverImage": "/images/subjectsCovers/principles-of-software-engineering.jpg",
+        "path": "/semesters/semester-2/principles-of-software-engineering/",
+        "iconName": "principles-of-software-engineering",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-2/principles-of-software-engineering/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1 & 2",
+            "file": "/materials/semester-2/principles-of-software-engineering/lecture-1-and-2.pdf",
+            "date": "2025-08-10"
+          },
+          {
+            "title": "Lecture 3 & 4",
+            "file": "/materials/semester-2/principles-of-software-engineering/lecture-3-and-4.pdf",
+            "date": "2025-08-24"
+          },
+          {
+            "title": "Lecture 5 & 6",
+            "file": "/materials/semester-2/principles-of-software-engineering/lecture-5-6.pdf",
+            "date": "2025-09-07"
+          },
+          {
+            "title": "Lecture 7 - 12",
+            "file": "/materials/semester-2/principles-of-software-engineering/lecture-7-12.pdf",
+            "date": "2025-09-21"
+          },
+          {
+            "title": "Lecture 13 & 14",
+            "file": "/materials/semester-2/principles-of-software-engineering/lecture-13-14.pdf",
+            "date": "2025-11-23"
+          },
+          {
+            "title": "Lecture 15",
+            "file": "/materials/semester-2/principles-of-software-engineering/lecture-15.pdf",
+            "date": "2025-12-07"
+          },
+          {
+            "title": "Lecture 16",
+            "file": "/materials/semester-2/principles-of-software-engineering/lecture-16.pdf",
+            "date": "2025-12-14"
+          }
+        ]
+      },
+
+      {
+        "subjectName": "Data Communication and Networking",
+        "teacher": "Mirwais Shirzad",
+        "day": "Monday",
+        "location": "602",
+        "coverImage": "/images/subjectsCovers/data-communication-and-networking.jpg",
+        "path": "/semesters/semester-2/data-communication-and-networking/",
+        "iconName": "data-communication-and-networking",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-2/data-communication-and-networking/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 1.pdf",
+            "date": "2025-08-11"
+          },
+          {
+            "title": "Lecture 2",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 2.pdf",
+            "date": "2025-08-18"
+          },
+          {
+            "title": "Lecture 2 Part 2",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 2 Part 2.pdf",
+            "date": "2025-08-18"
+          },
+          {
+            "title": "Lecture 3",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 3.pdf",
+            "date": "2025-08-25"
+          },
+          {
+            "title": "Lecture 4",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 4.pdf",
+            "date": "2025-09-01"
+          },
+          {
+            "title": "Lecture 5 (Updated)",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 5 Updated.pdf",
+            "date": "2025-09-08"
+          },
+          {
+            "title": "Lecture 5 (Old)",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 5 Old.pdf",
+            "date": "2025-09-08"
+          },
+          {
+            "title": "Lecture 6",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 6.pdf",
+            "date": "2025-09-15"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 7.pdf",
+            "date": "2025-09-22"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 8.pdf",
+            "date": "2025-09-29"
+          },
+          {
+            "title": "Lecture 9",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 9.pdf",
+            "date": "2025-10-27"
+          },
+          {
+            "title": "Lecture 10",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 10.pdf",
+            "date": "2025-11-03"
+          },
+          {
+            "title": "Lecture 11",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 11.pdf",
+            "date": "2025-11-10"
+          },
+          {
+            "title": "Lecture 12",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 12.pdf",
+            "date": "2025-11-17"
+          },
+          {
+            "title": "Lecture 13",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 13.pdf",
+            "date": "2025-11-24"
+          },
+          {
+            "title": "Lecture 14",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 14.pdf",
+            "date": "2025-12-01"
+          },
+          {
+            "title": "Lecture 15",
+            "file": "/materials/semester-2/data-communication-and-networking/Lecture 15.pdf",
+            "date": "2025-12-08"
+          }
+        ]
+      },
+      {
+        "subjectName": "Object Oriented Programming",
+        "teacher": "Fazal Maula Safi",
+        "day": "Monday",
+        "location": "Lab 1",
+        "coverImage": "/images/subjectsCovers/object-oriented-programming.jpg",
+        "path": "/semesters/semester-2/object-oriented-programming/",
+        "iconName": "oop",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-2/object-oriented-programming/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 1.pdf",
+            "date": "2025-08-12"
+          },
+          {
+            "title": "Lecture 2",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 2.pdf",
+            "date": "2025-08-19"
+          },
+          {
+            "title": "Lecture 3",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 3.pdf",
+            "date": "2025-08-26"
+          },
+          {
+            "title": "Lecture 4",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 4.pdf",
+            "date": "2025-09-02"
+          },
+          {
+            "title": "Lecture 5",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 5.pdf",
+            "date": "2025-09-09"
+          },
+          {
+            "title": "Lecture 6",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 6.pdf",
+            "date": "2025-09-16"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 7.pdf",
+            "date": "2025-09-23"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 8.pdf",
+            "date": "2025-09-30"
+          },
+          {
+            "title": "Lecture 9",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 9.pdf",
+            "date": "2025-10-28"
+          },
+          {
+            "title": "Lecture 10",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 10.pdf",
+            "date": "2025-11-04"
+          },
+          {
+            "title": "Lecture 11",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 11.pdf",
+            "date": "2025-11-11"
+          },
+          {
+            "title": "Lecture 12",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 12.pdf",
+            "date": "2025-11-18"
+          },
+          {
+            "title": "Lecture 13",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 13.pdf",
+            "date": "2025-11-25"
+          },
+          {
+            "title": "Lecture 14",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 14.pdf",
+            "date": "2025-12-02"
+          },
+          {
+            "title": "Lecture 15",
+            "file": "/materials/semester-2/object-oriented-programming/Lecture 15.pdf",
+            "date": "2025-12-09"
+          }
+        ]
+      },
+      {
+        "subjectName": "Digital Logic and Design",
+        "teacher": "Waliullah Shinwari",
+        "day": "",
+        "location": "408",
+        "coverImage": "/images/subjectsCovers/digital-logic-and-design.jpg",
+        "path": "/semesters/semester-2/digital-logic-and-design/",
+        "iconName": "dld",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-2/digital-logic-and-design/course-policy.pdf"
+          },
+          {
+            "title": "Slide 1",
+            "file": "/materials/semester-2/digital-logic-and-design/lecture-1.pdf",
+            "date": "2025-08-13"
+          },
+          {
+            "title": "Slide 2",
+            "file": "/materials/semester-2/digital-logic-and-design/lecture-2.pdf",
+            "date": "2025-08-20"
+          },
+          {
+            "title": "Slide 3",
+            "file": "/materials/semester-2/digital-logic-and-design/lecture-3.pdf",
+            "date": "2025-08-27"
+          },
+          {
+            "title": "Slide 4",
+            "file": "/materials/semester-2/digital-logic-and-design/lecture-4.pdf",
+            "date": "2025-09-03"
+          },
+          {
+            "title": "Slide 5",
+            "file": "/materials/semester-2/digital-logic-and-design/lecture-5.pdf",
+            "date": "2025-09-10"
+          },
+          {
+            "title": "Slide 6",
+            "file": "/materials/semester-2/digital-logic-and-design/lecture-6.pdf",
+            "date": "2025-09-17"
+          },
+          {
+            "title": "Slide 7",
+            "file": "/materials/semester-2/digital-logic-and-design/lecture-7.pdf",
+            "date": "2025-09-24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "semesterName": "Semester 3",
+    "slug": "semester-3",
+    "url": "semesters/semester-3",
+    "credits": 19,
+    "barColor": "rgb(175, 62, 62)",
+    "subjects": [
+      {
+        "subjectName": "Modern Programming Languages",
+        "coverImage": "/images/subjectsCovers/modern-programming-languages.jpg",
+        "iconName": "code-bracket",
+        "teacher": "Sayed Mortaza Kazemy",
+        "location": "Lab 03",
+        "day": "Sunday",
+        "path": "/semesters/semester-3/modern-programming-languages/",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-3/modern-programming-languages/course-policy.pdf"
+          },
+          {
+            "title": "Slide 1",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-1.pdf",
+            "date": "2025-08-10"
+          },
+          {
+            "title": "Slide 2",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-2.pdf",
+            "date": "2025-08-17"
+          }
+        ]
+      },
+      {
+        "subjectName": "Social System of Islam",
+        "coverImage": "/images/subjectsCovers/social-system-of-islam.jpg",
+        "iconName": "users",
+        "teacher": "Lutfullah Hamidi",
+        "location": "502",
+        "day": "Monday",
+        "path": "/semesters/semester-3/social-system-of-islam/",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-3/social-system-of-islam/course-policy.pdf"
+          },
+          {
+            "title": "Slide 1",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-1.pdf",
+            "date": "2025-08-11"
+          },
+          {
+            "title": "Slide 2",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-2.pdf",
+            "date": "2025-08-18"
+          },
+          {
+            "title": "Slide 3",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-3.pdf",
+            "date": "2025-08-25"
+          },
+          {
+            "title": "Slide 4",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-4.pdf",
+            "date": "2025-09-01"
+          }
+        ]
+      },
+      {
+        "subjectName": "Ethical System of Islam",
+        "coverImage": "/images/subjectsCovers/ethical-system-of-islam.jpg",
+        "iconName": "heart",
+        "teacher": "Lutfullah Hamidi",
+        "location": "502",
+        "day": "Monday",
+        "path": "/semesters/semester-3/ethical-system-of-islam/",
+        "materials": [
+          {
+            "title": "Course Policy Not Found",
+            "file": "#",
+            "date": "2025-08-11"
+          },
+          {
+            "title": "Slide 1",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-1.pdf",
+            "date": "2025-08-11"
+          },
+          {
+            "title": "Slide 2",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-2.pdf",
+            "date": "2025-08-18"
+          },
+          {
+            "title": "Slide 3",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-3.pdf",
+            "date": "2025-08-25"
+          },
+          {
+            "title": "Slide 4",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-4.pdf",
+            "date": "2025-09-01"
+          }
+        ]
+      },
+      {
+        "subjectName": "Linear Algebra",
+        "coverImage": "/images/subjectsCovers/linear-algebra.jpg",
+        "iconName": "calculator",
+        "teacher": "Noorullah Ibrahimi",
+        "location": "404",
+        "day": "Tuesday",
+        "path": "/semesters/semester-3/linear-algebra/",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-3/linear-algebra/course-policy.pdf"
+          },
+          {
+            "title": "Slide 1",
+            "file": "/materials/semester-3/linear-algebra/lecture-1.pdf",
+            "date": "2025-08-12"
+          },
+          {
+            "title": "Slide 2",
+            "file": "/materials/semester-3/linear-algebra/lecture-2.pdf",
+            "date": "2025-08-19"
+          },
+          {
+            "title": "Slide 3",
+            "file": "/materials/semester-3/linear-algebra/lecture-3.pdf",
+            "date": "2025-08-26"
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Structures and Algorithms",
+        "coverImage": "/images/subjectsCovers/data-structures-and-algorithms.jpg",
+        "iconName": "database",
+        "teacher": "Ahmad Nawid Aryan Kambakhsh",
+        "location": "408",
+        "day": "Wednesday",
+        "path": "/semesters/semester-3/data-structures-and-algorithms/",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-3/data-structures-and-algorithms/course-policy.pdf"
+          }
+        ]
+      },
+      {
+        "subjectName": "Advance Computer Networking",
+        "coverImage": "/images/subjectsCovers/advance-computer-networking.jpg",
+        "iconName": "network",
+        "teacher": "Mirwais Sherzad",
+        "location": "602",
+        "day": "Thursday",
+        "path": "/semesters/semester-3/advance-computer-networking/",
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-3/advance-computer-networking/course-policy.pdf"
+          },
+          {
+            "title": "Slide 1",
+            "file": "/materials/semester-3/advance-computer-networking/lecture-1.pdf",
+            "date": "2025-08-14"
+          },
+          {
+            "title": "Slide 2",
+            "file": "/materials/semester-3/advance-computer-networking/lecture-2.pdf",
+            "date": "2025-08-21"
+          },
+          {
+            "title": "Slide 3",
+            "file": "/materials/semester-3/advance-computer-networking/lecture-3.pdf",
+            "date": "2025-08-28"
+          }
+        ]
+      }
+    ]
+  }
+]

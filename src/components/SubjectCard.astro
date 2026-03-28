@@ -1,0 +1,125 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { subject } = Astro.props;
+const {
+  coverImage,
+  iconName,
+  subjectName: title,
+  teacher,
+  location,
+  day,
+  path,
+} = subject;
+---
+
+<a href={path} class="subject-card">
+  <div class="card-cover">
+    <img src={coverImage} alt={title} />
+  </div>
+  <div class="card-body">
+    <div class="icon-floating">
+      <Icon name={iconName} />
+    </div>
+    <h1 class="subject-title">
+      {title}
+    </h1>
+    <div class="info-stack">
+      <div class="info-line">
+        <span class="lbl">Teacher</span>
+        <span class="txt">{teacher}</span>
+      </div>
+      <div class="info-line">
+        <span class="lbl">Room</span>
+        <span class="txt">{location}</span>
+      </div>
+      <div class="info-line">
+        <span class="lbl">Day</span>
+        <span class="txt">{day}</span>
+      </div>
+    </div>
+  </div>
+</a>
+<style>
+  .subject-card {
+    background: var(--card);
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .subject-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  .subject-card:hover .card-cover img {
+    transform: scale(1.1);
+  }
+  .card-cover {
+    height: 120px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+  }
+  .card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .card-body {
+    padding: 30px 15px 15px;
+  }
+  .icon-floating {
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    background: var(--accent);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid var(--background);
+    box-shadow:
+      0 3px 12px rgba(0, 0, 0, 0.07),
+      0 1px 4px rgba(0, 0, 0, 0.07);
+    z-index: 4;
+  }
+  .icon-floating [data-icon] {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  .subject-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 32px 0 0;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+    line-height: 28px;
+  }
+  .info-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .info-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  .lbl {
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 9px;
+  }
+  .txt {
+    color: var(--text-gray);
+  }
+</style>
