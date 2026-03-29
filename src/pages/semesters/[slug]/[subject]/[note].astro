@@ -175,8 +175,15 @@ const direction = isRTL ? "rtl" : "ltr";
       text-transform: uppercase;
     }
   }
+  .astro-code,
+  .astro-code * {
+    /* This ensures the code uses a proper mono font */
+    font-family:
+      "JetBrains Mono", "Fira Code", "Cascadia Code", "Source Code Pro",
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace !important;
+  }
 
-  /* 4. Code Blocks (Using your --code variable) */
   .astro-code {
     position: relative;
     padding: 1.5rem !important;
@@ -186,6 +193,8 @@ const direction = isRTL ? "rtl" : "ltr";
     background-color: var(--code) !important;
     border: 1px solid var(--border) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    direction: ltr; /* Keeps code LTR even on RTL sites */
+    unicode-bidi: plaintext;
   }
 
   /* 5. Copy Button */
