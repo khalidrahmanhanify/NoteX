@@ -8,7 +8,7 @@
     "subjects": [
       {
         "subjectName": "Biography of Prophet (PBUH)",
-        "coverImage": "/images/subjectsCovers/biography-of-prophet-pbuh.jpg",
+        "coverImage": "../assets/images/subjectsCovers/biography-of-prophet-pbuh.jpg",
         "iconName": "moon",
         "teacher": "Abdulhaq Haqyar",
         "location": "Room 502",
@@ -39,7 +39,7 @@
         "teacher": "Abdulhaq Haqyar",
         "day": "Saturday",
         "location": "306",
-        "coverImage": "/images/subjectsCovers/biography-of-prophet-pbuh.jpg",
+        "coverImage": "../assets/images/subjectsCovers/biography-of-prophet-pbuh.jpg",
         "path": "/semesters/semester-2/biography-of-prophet-pbuh/",
         "iconName": "biography",
         "materials": [
@@ -134,7 +134,7 @@
         "teacher": "Abdulhaq Haqhar",
         "day": "Saturday",
         "location": "306",
-        "coverImage": "/images/subjectsCovers/worship-system-of-islam.jpg",
+        "coverImage": "../assets/images/subjectsCovers/worship-system-of-islam.jpg",
         "path": "/semesters/semester-2/worship-system-of-islam/",
         "iconName": "worship",
         "materials": [
@@ -229,7 +229,7 @@
         "teacher": "Mashal Rokhan",
         "day": "Sunday",
         "location": "402",
-        "coverImage": "/images/subjectsCovers/principles-of-software-engineering.jpg",
+        "coverImage": "../assets/images/subjectsCovers/principles-of-software-engineering.jpg",
         "path": "/semesters/semester-2/principles-of-software-engineering/",
         "iconName": "principles-of-software-engineering",
         "materials": [
@@ -280,7 +280,7 @@
         "teacher": "Mirwais Shirzad",
         "day": "Monday",
         "location": "602",
-        "coverImage": "/images/subjectsCovers/data-communication-and-networking.jpg",
+        "coverImage": "../assets/images/subjectsCovers/data-communication-and-networking.jpg",
         "path": "/semesters/semester-2/data-communication-and-networking/",
         "iconName": "data-communication-and-networking",
         "materials": [
@@ -380,7 +380,7 @@
         "teacher": "Fazal Maula Safi",
         "day": "Monday",
         "location": "Lab 1",
-        "coverImage": "/images/subjectsCovers/object-oriented-programming.jpg",
+        "coverImage": "../assets/images/subjectsCovers/object-oriented-programming.jpg",
         "path": "/semesters/semester-2/object-oriented-programming/",
         "iconName": "oop",
         "materials": [
@@ -470,7 +470,7 @@
         "teacher": "Waliullah Shinwari",
         "day": "",
         "location": "408",
-        "coverImage": "/images/subjectsCovers/digital-logic-and-design.jpg",
+        "coverImage": "../assets/images/subjectsCovers/digital-logic-and-design.jpg",
         "path": "/semesters/semester-2/digital-logic-and-design/",
         "iconName": "dld",
         "materials": [
@@ -526,7 +526,7 @@
     "subjects": [
       {
         "subjectName": "Modern Programming Languages",
-        "coverImage": "/images/subjectsCovers/modern-programming-languages.jpg",
+        "coverImage": "../assets/images/subjectsCovers/modern-programming-languages.jpg",
         "iconName": "code-bracket",
         "teacher": "Sayed Mortaza Kazemy",
         "location": "Lab 03",
@@ -551,7 +551,7 @@
       },
       {
         "subjectName": "Social System of Islam",
-        "coverImage": "/images/subjectsCovers/social-system-of-islam.jpg",
+        "coverImage": "../assets/images/subjectsCovers/social-system-of-islam.jpg",
         "iconName": "users",
         "teacher": "Lutfullah Hamidi",
         "location": "502",
@@ -586,7 +586,7 @@
       },
       {
         "subjectName": "Ethical System of Islam",
-        "coverImage": "/images/subjectsCovers/ethical-system-of-islam.jpg",
+        "coverImage": "../assets/images/subjectsCovers/ethical-system-of-islam.jpg",
         "iconName": "heart",
         "teacher": "Lutfullah Hamidi",
         "location": "502",
@@ -622,7 +622,7 @@
       },
       {
         "subjectName": "Linear Algebra",
-        "coverImage": "/images/subjectsCovers/linear-algebra.jpg",
+        "coverImage": "../assets/images/subjectsCovers/linear-algebra.jpg",
         "iconName": "calculator",
         "teacher": "Noorullah Ibrahimi",
         "location": "404",
@@ -652,7 +652,7 @@
       },
       {
         "subjectName": "Data Structures and Algorithms",
-        "coverImage": "/images/subjectsCovers/data-structures-and-algorithms.jpg",
+        "coverImage": "../assets/images/subjectsCovers/data-structures-and-algorithms.jpg",
         "iconName": "database",
         "teacher": "Ahmad Nawid Aryan Kambakhsh",
         "location": "408",
@@ -667,7 +667,7 @@
       },
       {
         "subjectName": "Advance Computer Networking",
-        "coverImage": "/images/subjectsCovers/advance-computer-networking.jpg",
+        "coverImage": "../assets/images/subjectsCovers/advance-computer-networking.jpg",
         "iconName": "network",
         "teacher": "Mirwais Sherzad",
         "location": "602",

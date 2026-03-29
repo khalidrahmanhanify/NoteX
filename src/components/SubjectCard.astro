@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 
 const { subject } = Astro.props;
 const {
@@ -15,7 +16,14 @@ const {
 
 <a href={path} class="subject-card">
   <div class="card-cover">
-    <img src={coverImage} alt={title} />
+    <!-- <img src={coverImage} alt={title} /> -->
+    <Image
+      src={coverImage}
+      alt={title}
+      loading={"eager"}
+      format="avif"
+      width={350}
+    />
   </div>
   <div class="card-body">
     <div class="icon-floating">
