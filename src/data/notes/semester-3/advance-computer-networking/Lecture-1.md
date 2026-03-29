@@ -16,8 +16,6 @@ order: 16
 - Types of Network
 - Benefits of Networks
 
----
-
 # What is a Network
 
 A **network** is a set of devices (**nodes**) connected by **communication links**.
@@ -46,8 +44,6 @@ The main purpose of a network is **resource sharing**, such as:
 - Storage
 - Other computational resources
 
----
-
 # Internetwork
 
 We use **hubs, bridges, and switches** to form a **network**.
@@ -63,8 +59,6 @@ We use **routers** to connect **different networks** and form an internetwork.
 - Switch → connects devices in **same network**
 - Router → connects **different networks**
 
----
-
 # Benefits of Networks
 
 ## 1. Resource Sharing
@@ -78,8 +72,6 @@ Allows multiple devices to share:
 
 This reduces cost and increases efficiency.
 
----
-
 ## 2. Communication
 
 Networks allow users to communicate using:
@@ -89,16 +81,12 @@ Networks allow users to communicate using:
 - VoIP
 - Video conferencing
 
----
-
 ## 3. Centralized Data Management
 
 - Data stored in **central server**
 - Easy management
 - Easy backup
 - Better organization
-
----
 
 ## 4. Scalability
 
@@ -108,15 +96,11 @@ Networks can be **expanded easily** by adding:
 - New devices
 - New services
 
----
-
 ## 5. Cost Efficiency
 
 - Less hardware required
 - Shared software licenses
 - Reduced maintenance cost
-
----
 
 ## 6. Security
 
@@ -126,8 +110,6 @@ Networks provide centralized security:
 - Access control
 - Encryption
 - Authentication
-
----
 
 ## 7. Remote Access
 
@@ -139,8 +121,6 @@ Users can access:
 
 from **remote locations**.
 
----
-
 ## 8. Reliability
 
 If one device fails:
@@ -148,16 +128,12 @@ If one device fails:
 - Network can still work
 - Alternative paths may exist
 
----
-
 ## 9. Backup and Recovery
 
 - Centralized backup
 - Automated backups
 - Easy disaster recovery
 - Reduced data loss
-
----
 
 # Types of Network
 
@@ -175,8 +151,6 @@ Each computer decides:
 
 There is **no dedicated server**.
 
----
-
 ### Advantages of Peer-to-Peer
 
 - Easy to install and configure
@@ -186,8 +160,6 @@ There is **no dedicated server**.
 - No additional software required
 - No dedicated administrator required
 
----
-
 ### Disadvantages of Peer-to-Peer
 
 - Weak security
@@ -196,8 +168,6 @@ There is **no dedicated server**.
 - Backup must be done on each machine
 - Difficult to manage data
   **Not suitable for networks with more than 10 computers**
-
----
 
 ## 2. Domain-Based / Client-Server Network
 
@@ -215,8 +185,6 @@ Server controls:
 
 Clients depend on server.
 
----
-
 ### Advantages of Client-Server
 
 - Centralized user accounts
@@ -226,8 +194,6 @@ Clients depend on server.
 - Single login password
 - Centralized backup
 
----
-
 ### Disadvantages of Client-Server
 
 - Server failure can affect entire network
@@ -235,8 +201,6 @@ Clients depend on server.
 - Higher cost
 - Dedicated hardware required
 - Specialized server software required
-
----
 
 # Quick Comparison (Exam Important)
 

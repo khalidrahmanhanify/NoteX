@@ -24,8 +24,6 @@ Python is a **high-level, general-purpose programming language** used for many t
 - **Object-Oriented Programming (OOP)**
 - **Functional programming**
 
----
-
 # 2. History of Python
 
 There are **not only two types of Python**, but **two major versions**.
@@ -39,8 +37,6 @@ There are **not only two types of Python**, but **two major versions**.
 
 Because of this, Python 2 is **no longer recommended for new projects**.
 
----
-
 ## Python 3
 
 - First released in **2008**.
@@ -49,8 +45,6 @@ Because of this, Python 2 is **no longer recommended for new projects**.
 Python 3 is **not fully backward compatible with Python 2**, meaning some Python 2 code will not work in Python 3 without modification.
 
 ✔ Python 3 is **actively developed and updated**, which is why it is the **main version used today**.
-
----
 
 # 3. Difference Between Compiler and Interpreter
 
@@ -74,8 +68,6 @@ Examples of interpreted languages:
 
 Python actually **compiles code to bytecode internally**, then executes it using an interpreter.
 
----
-
 ## Compiler
 
 A **compiler** translates the **entire program at once** into **machine code** before execution.
@@ -91,8 +83,6 @@ Examples of compiled languages:
 - **C**
 - **C++**
 - **Go**
-
----
 
 # 4. Difference Between Static and Dynamic
 
@@ -120,8 +110,6 @@ Examples:
 - **C++**
 - **Java**
 
----
-
 ## Dynamic
 
 In **dynamic typing**, the **data type is determined automatically while the program runs**.
@@ -144,8 +132,6 @@ Examples:
 - **Python**
 - **JavaScript**
 - **Ruby**
-
----
 
 # Quick Summary
 

@@ -14,8 +14,6 @@ order: 14
 
 A **string** is a **sequence of characters**.
 
----
-
 ## 2. Creating Strings (Single-line and Multi-line)
 
 In Python, unlike numbers, strings are **not automatically recognized** as a specific type unless we create them explicitly. Strings can be created in two ways:
@@ -52,8 +50,6 @@ multi-line
 string."""
 ```
 
----
-
 ## 3. Indexing
 
 Indexing is used to access individual characters in a string.
@@ -68,8 +64,6 @@ name = "Khalid Rahman"
 print(name[0])  # Prints 'K'
 print(name[-1]) # Prints 'n'
 ```
-
----
 
 ## 4. Slicing
 
@@ -93,8 +87,6 @@ print(text[0:5])    # Prints 'Khali'
 print(text[::2])    # Prints every second character
 ```
 
----
-
 ## 5. Formatting
 
 Embedding variables inside strings can be done using **f-strings**:
@@ -103,8 +95,6 @@ Embedding variables inside strings can be done using **f-strings**:
 age = 23
 print(f"Ahmad's age is {age}")  # Prints "Ahmad's age is 23"
 ```
-
----
 
 ## 6. Common String Functions
 

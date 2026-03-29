@@ -28,8 +28,6 @@ Here:
 - `age` stores the value `20`
 - `name` stores the value `"Ali"`
 
----
-
 # Variable Naming Conventions
 
 These are the **rules that must be followed when naming variables**.
@@ -100,8 +98,6 @@ age
 price_value
 ```
 
----
-
 # Best Practices for Naming Variables
 
 To write **clean and understandable code**, programmers follow these practices:
@@ -122,8 +118,6 @@ student_age=20
 
 This makes the code **easier to understand**.
 
----
-
 # Naming Styles
 
 There are different styles for writing variable names.
@@ -138,8 +132,6 @@ Example:
 ageOfStudent=20
 ```
 
----
-
 ### 2. PascalCase
 
 The **first letter of every word is capitalized**.
@@ -151,8 +143,6 @@ AgeOfStudent=20
 ```
 
 🔹 **Addition:** PascalCase is often used for **class names in Python**, not variables.
-
----
 
 ### 3. snake_case
 
@@ -167,8 +157,6 @@ age_of_student=20
 🔹 **Important:**
 
 `snake_case` is the **recommended style for variables and functions in Python (PEP 8 standard)**.
-
----
 
 # Structure of Statements
 
@@ -199,8 +187,6 @@ result=a+b
 
 This is because **Python is a dynamically typed language**.
 
----
-
 # Operators
 
 An **operator** is a symbol that **performs an operation on operands**.
@@ -213,8 +199,6 @@ a+b
 
 - `a` and `b` → operands
 - `+` → operator
-
----
 
 # Boolean Expressions
 
@@ -233,8 +217,6 @@ Result:
 
 - `True` if `a` is greater than `b`
 - `False` otherwise
-
----
 
 # Relational Operators
 
@@ -259,8 +241,6 @@ b=20
 print(a < b) # True
 ```
 
----
-
 # Bitwise Operators
 
 Bitwise operators work on the **binary representation of numbers**.
@@ -278,8 +258,6 @@ b=3 # 011
 print(a&b) # 1
 ```
 
----
-
 # Symbols of Bitwise Operators
 
 🔹 **Correction:** The NOT operator is `~`, not `-`.
@@ -293,8 +271,6 @@ print(a&b) # 1
 | `>>`     | Right Shift |
 | `<<`     | Left Shift  |
 
----
-
 # Difference Between Bitwise and Logical Operators
 
 | Bitwise                          | Logical                          |
@@ -302,8 +278,6 @@ print(a&b) # 1
 | Works on **bits**                | Works on **Boolean expressions** |
 | Operands are **integers**        | Operands are **Boolean values**  |
 | Result is usually an **integer** | Result is **True or False**      |
-
----
 
 # Logical Operators
 
@@ -325,8 +299,6 @@ is_student=True
 
 print(age>18andis_student)
 ```
-
----
 
 # Identity Operators
 
