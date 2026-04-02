@@ -42,6 +42,14 @@ const semesters = defineCollection({
               date: z.coerce.date().optional(),
             }),
           ),
+          videos: z
+            .array(
+              z.object({
+                title: z.string(),
+                youtubeId: z.string(),
+              }),
+            )
+            .optional(),
         }),
       ),
     }),

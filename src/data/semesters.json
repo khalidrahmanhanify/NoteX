@@ -693,6 +693,12 @@
             "file": "/materials/semester-3/advance-computer-networking/lecture-3.pdf",
             "date": "2025-08-28"
           }
+        ],
+        "videos": [
+          {
+            "title": "Basic Commands of Switch and Router",
+            "youtubeId": "EHG8K_dbdRQ"
+          }
         ]
       }
     ]

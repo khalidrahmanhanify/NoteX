@@ -1,0 +1,103 @@
+---
+interface Props {
+  videos?: {
+    title: string;
+    youtubeId: string;
+  }[];
+}
+
+const { videos } = Astro.props;
+---
+
+{
+  videos && videos.length > 0 && (
+    <div class="video-section">
+      <h3 class="group-title">Video Lectures</h3>
+      <hr class="hr" />
+      <div class="embed-grid">
+        {videos.map((video) => (
+          // console.log(video)
+          <div class="video-container">
+            <div class="iframe-wrapper">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0&modestbranding=1&controls=1`}
+                title={video.title}
+                loading="lazy"
+                allowfullscreen
+              />
+            </div>
+            <div class="video-meta">
+              <span class="video-title">{video.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+<style>
+  .video-section {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .group-title {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .hr {
+    margin-bottom: 16px;
+    border: 0;
+    border-top: 1px solid var(--divider);
+  }
+  .embed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .video-container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition:
+      border-color 0.2s,
+      transform 0.2s;
+  }
+  .video-container:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .iframe-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: #000;
+  }
+  .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100%;
+    outline: none;
+    border: none;
+  }
+  .video-meta {
+    padding: 12px;
+    background: var(--card);
+  }
+  .video-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+    line-height: 1.4;
+  }
+</style>

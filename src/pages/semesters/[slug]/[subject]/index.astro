@@ -5,6 +5,7 @@ import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 import NoteCard from "@/components/NoteCard.astro";
 import BackButton from "@/components/BackButton.astro";
+import VideoGrid from "@/components/VideoGrid.astro";
 
 export const getStaticPaths = (async () => {
   const semesters = await getCollection("semesters");
@@ -93,6 +94,8 @@ const previousPage =
     </div>
 
     <h2 class="lectures">Lectures</h2>
+    <hr class="hr" />
+    <VideoGrid videos={subject.videos} />
     <hr class="hr" />
     <div class="note-grid">
       {notes.map((note) => <NoteCard {note} />)}
