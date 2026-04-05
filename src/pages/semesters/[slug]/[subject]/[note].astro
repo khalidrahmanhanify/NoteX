@@ -46,6 +46,8 @@ const direction = isRTL ? "rtl" : "ltr";
 </BaseLayout>
 
 <style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
   /* 1. Layout & Container */
   .note-page-wrapper {
     max-width: 850px;
@@ -123,6 +125,17 @@ const direction = isRTL ? "rtl" : "ltr";
     font-weight: 700;
   }
 
+  /* Specific font for Persian/Arabic when dir is rtl */
+  .markdown-body[dir="rtl"] {
+    font-family: "Amiri", serif;
+  }
+
+  /* Ensure headings also inherit the Amiri fonRTL mode */
+  .markdown-body[dir="rtl"] h1,
+  .markdown-body[dir="rtl"] h2,
+  .markdown-body[dir="rtl"] h3 {
+    font-family: "Amiri", serif;
+  }
   /* --- MOBILE TRANSFORMATION (Stacked Labels) --- */
   @media (max-width: 768px) {
     .markdown-body table,
