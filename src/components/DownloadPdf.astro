@@ -1,0 +1,101 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button id="download-pdf" class="download-btn" aria-label="Save as PDF">
+  <!-- Modern Lucide-style Download Icon -->
+  <Icon name="download" />
+  <span class="btn-text">Save as PDF</span>
+</button>
+
+<script>
+  document.getElementById("download-pdf")?.addEventListener("click", () => {
+    window.print();
+  });
+</script>
+
+<style>
+  :root {
+    --btn-bg: #0f172a; /* Deep Slate */
+  }
+
+  .download-btn {
+    /* Base Styles */
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 12px 24px;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--card);
+
+    border: 1px solid var(--accent);
+    border-radius: 100px; /* Pill shape */
+    cursor: pointer;
+
+    /* Premium Shadows & Transitions */
+    box-shadow:
+      0 10px 25px -5px rgba(0, 0, 0, 0.3),
+      0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+  }
+
+  .btn-icon {
+    transition: transform 0.3s ease;
+  }
+
+  /* Desktop Positioning (Right Side) */
+  @media (min-width: 768px) {
+    .download-btn {
+      bottom: 40px;
+      right: 40px;
+    }
+
+    .download-btn:hover {
+      background: var(--btn-hover);
+      transform: translateY(-4px) scale(1.02);
+      border-color: var(--accent);
+      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.4);
+    }
+
+    .download-btn:hover .btn-icon {
+      transform: translateY(2px);
+      color: var(--accent);
+    }
+  }
+
+  /* Mobile Positioning (Bottom Centered) */
+  @media (max-width: 767px) {
+    .download-btn {
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%; /* Larger tap target for fingers */
+      max-width: 320px;
+      padding: 16px;
+    }
+
+    .download-btn:active {
+      transform: translateX(-50%) scale(0.96);
+      background: var(--btn-hover);
+    }
+  }
+
+  /* Hide during print */
+  @media print {
+    .download-btn {
+      display: none !important;
+    }
+  }
+</style>

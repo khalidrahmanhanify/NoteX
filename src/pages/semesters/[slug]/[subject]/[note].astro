@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro";
 import BaseLayout from "@/components/BaseLayout.astro";
 import { getCollection, render } from "astro:content";
 import BackButton from "@/components/BackButton.astro";
+import DownloadPdf from "@/components/DownloadPdf.astro";
 
 export const getStaticPaths = (async () => {
   const notes = await getCollection("notes");
@@ -38,6 +39,7 @@ const direction = isRTL ? "rtl" : "ltr";
 
 <BaseLayout title={currNote.data.title}>
   <div class="note-page-wrapper">
+    <DownloadPdf />
     <BackButton path={previousPage} />
     <article class="markdown-body container" dir={direction}>
       <Content />
@@ -137,7 +139,7 @@ const direction = isRTL ? "rtl" : "ltr";
     font-family: "Amiri", serif;
   }
   /* --- MOBILE TRANSFORMATION (Stacked Labels) --- */
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .markdown-body table,
     .markdown-body thead,
     .markdown-body tbody,
@@ -253,7 +255,7 @@ const direction = isRTL ? "rtl" : "ltr";
     margin: 4rem 0;
   }
 
-  @media (max-width: 640px) {
+  @media screen and (max-width: 640px) {
     .note-page-wrapper {
       padding: 1rem 0.5rem;
     }

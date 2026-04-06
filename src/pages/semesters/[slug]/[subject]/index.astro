@@ -57,12 +57,12 @@ const previousPage =
         <h3 class="group-title">Documents</h3>
         <hr class="hr" />
         <a href={coursePolicy.file} class="download-card">
-          <span class="icon">✅</span>
+          <span class="icon"><Icon name="policy" /></span>
           <div class="text">
             <span class="name">Course Policy</span>
             <span class="sub">Click to Download PDF</span>
           </div>
-          <span class="dl-icon"> ⬇️ </span>
+          <span class="dl-icon"> <Icon name="download" /></span>
         </a>
       </div>
       <div class="download-group">
@@ -72,7 +72,9 @@ const previousPage =
           {
             slides.map((slide) => (
               <a href={slide.file} class="download-card">
-                <span class="icon">📊</span>
+                <span class="icon">
+                  <Icon name="pptx" />
+                </span>
                 <div class="text">
                   <span class="name">{slide.title}</span>
                   <span class="sub">
@@ -85,7 +87,9 @@ const previousPage =
                       : "No date provided"}
                   </span>
                 </div>
-                <span class="dl-icon"> ⬇️ </span>
+                <span class="dl-icon">
+                  <Icon name="download" />
+                </span>
               </a>
             ))
           }
@@ -157,6 +161,9 @@ const previousPage =
   .dl-icon {
     opacity: 0.5;
     font-size: 14px;
+  }
+  .icon {
+    font-size: 1.5rem;
   }
   .note-grid {
     display: grid;
