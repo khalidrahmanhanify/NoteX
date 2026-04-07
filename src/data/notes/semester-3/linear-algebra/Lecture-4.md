@@ -8,12 +8,6 @@ date: 2026-04-07
 order: 13
 ---
 
-Here is your **same notes rewritten more clearly**, with better explanations and cleaner wording. I did **not change math**, only improved readability and structure.
-
-You can paste this directly into **Obsidian**.
-
----
-
 # System of Linear Equations
 
 $$
@@ -216,58 +210,59 @@ $$
 
 ## 3.
 
-# $$
+$$
 
-\begin{gather}  
-\begin{bmatrix}  
+\begin{gather}
+\begin{bmatrix}
 1 & 3 \\
-0 & 9  
-\end{bmatrix}  
-\begin{bmatrix}  
+0 & 9
+\end{bmatrix}
+\begin{bmatrix}
 x \\
-y  
+y
 \end{bmatrix}
 
-\begin{bmatrix}  
+\begin{bmatrix}
 7 \\
-18  
-\end{bmatrix}  
+18
+\end{bmatrix}
 \end{gather}
+
 
 $$
 
 Convert to equations:
 
-
 $$
 
-\begin{gather}  
+\begin{gather}
 x + 3y = 7 \\
-9y = 18  
+9y = 18
 \end{gather}
+
 
 $$
 
 Solve:
 
-
 $$
 
 y = 2
 
-$$
 
+$$
 
 $$
 
 x + 3(2) = 7
 
-$$
 
+$$
 
 $$
 
 x = 1
+
 
 $$
 
@@ -277,29 +272,28 @@ $$
 
 ## Matrix Form
 
-
 $$
 
-\begin{bmatrix}  
+\begin{bmatrix}
 1 & 3\\
-2 & 4  
-\end{bmatrix}  
-\begin{bmatrix}  
+2 & 4
+\end{bmatrix}
+\begin{bmatrix}
 x\\
-y  
+y
 \end{bmatrix}
 
-\begin{bmatrix}  
+\begin{bmatrix}
 7\\
-10  
+10
 \end{bmatrix}
+
 
 $$
 
 ---
 
 ## Augmented Matrix
-
 
 $$
 
@@ -310,23 +304,23 @@ $$
 \end{array}
 \right]
 
+
 $$
 
 ---
 
 ## Row Operation
 
-
 $$
 
 -2R_1 + R_2 \to R_2
+
 
 $$
 
 ---
 
 ## After Elimination
-
 
 $$
 
@@ -337,37 +331,38 @@ $$
 \end{array}
 \right]
 
+
 $$
 
 ---
 
 ## Back Substitution
 
-
 $$
 
 -2y = -4
 
-$$
 
+$$
 
 $$
 
 y = 2
 
-$$
 
+$$
 
 $$
 
 x + 3(2) = 7
 
-$$
 
+$$
 
 $$
 
 x = 1
+
 
 $$
 
@@ -375,10 +370,10 @@ $$
 
 ## Final Answer
 
-
 $$
 
 (x,y) = (1,2)
+
 
 $$
 
@@ -386,32 +381,31 @@ $$
 
 # Solving a System of Three Equations
 
-
 $$
 
-\begin{bmatrix}  
+\begin{bmatrix}
 1 & 2 & 3 \\
 5 & 0 & 2 \\
--2 & 1 & 4  
-\end{bmatrix}  
-\begin{bmatrix}  
+-2 & 1 & 4
+\end{bmatrix}
+\begin{bmatrix}
 x\\
 y\\
-z  
+z
 \end{bmatrix}
 
-\begin{bmatrix}  
+\begin{bmatrix}
 14\\
 11\\
-12  
+12
 \end{bmatrix}
+
 
 $$
 
 ---
 
 ## Augmented Matrix
-
 
 $$
 
@@ -423,30 +417,30 @@ $$
 \end{array}
 \right]
 
+
 $$
 
 ---
 
 ## Row Operations
 
-
 $$
 
 R_2 - 5R_1 \to R_2
 
-$$
 
+$$
 
 $$
 
 R_3 + 2R_1 \to R_3
+
 
 $$
 
 ---
 
 ## After Elimination
-
 
 $$
 
@@ -458,30 +452,30 @@ $$
 \end{array}
 \right]
 
+
 $$
 
 ---
 
 ## Continue Elimination
 
-
 $$
 
 -\frac{1}{10}R_2 \to R_2
 
-$$
 
+$$
 
 $$
 
 R_3 - 5R_2 \to R_3
+
 
 $$
 
 ---
 
 ## Upper Triangular Matrix
-
 
 $$
 
@@ -493,51 +487,52 @@ $$
 \end{array}
 \right]
 
+
 $$
 
 ---
 
 ## Back Substitution
 
-
 $$
 
 \frac{7}{2}z=\frac{21}{2}
 
-$$
 
+$$
 
 $$
 
 z=3
 
-$$
 
+$$
 
 $$
 
 y+\frac{13}{10}(3)=\frac{59}{10}
 
-$$
 
+$$
 
 $$
 
 y=2
 
-$$
 
+$$
 
 $$
 
 x+2(2)+3(3)=14
 
-$$
 
+$$
 
 $$
 
 x=1
+
 
 $$
 
@@ -545,10 +540,12 @@ $$
 
 ## Final Solution
 
-
 $$
 
 (x,y,z) = (1,2,3)
+
+
+$$
 
 $$
 $$
