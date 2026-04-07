@@ -315,6 +315,9 @@ a {
     text-decoration: underline;
     text-decoration-color: #ccc;
   }
+  .katex {
+    color: black !important;
+  }
 }
 
 @page {
