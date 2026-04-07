@@ -11,7 +11,7 @@ order: 13
 # System of Linear Equations
 
 $$
-\begin{gather}
+\begin{gather*}
 \begin{bmatrix}
 1 & 3 \\
 2 & 4
@@ -44,7 +44,7 @@ y
 \\[6pt]
 x + 3y = 7 \\
 2x + 4y = 10
-\end{gather}
+\end{gather*}
 $$
 
 ---
@@ -57,22 +57,22 @@ We can multiply or divide **both sides** of an equation by the same constant.
 The solution will remain unchanged.
 
 $$
-\begin{gather}
+\begin{gather*}
 2(x + 3y) = 7(2) \\
 2x + 6y = 14 \\
 2(1) + 6(2) = 14 \\
 2 + 12 = 14
-\end{gather}
+\end{gather*}
 $$
 
 ---
 
 $$
-\begin{gather}
+\begin{gather*}
 2x + 4y = 10 \qquad \times 3 \\
 6x + 12y = 30 \\
 6(1) + 12(2) = 30
-\end{gather}
+\end{gather*}
 $$
 
 ---
@@ -83,17 +83,17 @@ We can change the order of equations (swap rows).
 This does **not** change the solution.
 
 $$
-\begin{gather}
+\begin{gather*}
 x + 3y = 7 \quad (1) \\
 2x + 4y = 10 \quad (2)
-\end{gather}
+\end{gather*}
 $$
 
 $$
-\begin{gather}
+\begin{gather*}
 2x + 4y = 10 \quad (1) \\
 x + 3y = 7 \quad (2)
-\end{gather}
+\end{gather*}
 $$
 
 ---
@@ -104,14 +104,14 @@ We can add two or more equations together.
 The resulting equation will still have the same solution.
 
 $$
-\begin{gather}
+\begin{gather*}
 2x + 6y = 14 \\
 8x + 16y = 40 \\
 \hline
 10x + 22y = 54 \\
 10(1) + 22(2) = 54 \\
 10 + 44 = 54
-\end{gather}
+\end{gather*}
 $$
 
 ---
@@ -121,7 +121,7 @@ $$
 ## 1.
 
 $$
-\begin{gather}
+\begin{gather*}
 \begin{bmatrix}
 1 & 3 \\
 7 & 9
@@ -138,7 +138,7 @@ y
 \\
 x + 3y = 4 \\
 7x + 9y = 16
-\end{gather}
+\end{gather*}
 $$
 
 We want to eliminate **x** from the equations.
@@ -146,13 +146,13 @@ We want to eliminate **x** from the equations.
 Multiply the first equation by **−7**:
 
 $$
-\begin{gather}
+\begin{gather*}
 -7x - 21y = -28 \\
 7x + 9y = 16 \\
 \hline
 0x - 12y = -12 \\
 y = 1
-\end{gather}
+\end{gather*}
 $$
 
 Another method is multiplying the first equation by **3**, then solving for **y**.
@@ -162,7 +162,7 @@ Another method is multiplying the first equation by **3**, then solving for **y*
 ## 2.
 
 $$
-\begin{gather}
+\begin{gather*}
 \begin{bmatrix}
 1 & 3 \\
 7 & 9
@@ -179,31 +179,31 @@ y
 \\
 x + 3y = 6 \\
 7x + 9y = 30
-\end{gather}
+\end{gather*}
 $$
 
 Eliminate **x**:
 
 $$
-\begin{gather}
+\begin{gather*}
 -7x - 21y = -42 \\
 7x + 9y = 30 \\
 \hline
 0x - 12y = -12 \\
 y = 1
-\end{gather}
+\end{gather*}
 $$
 
 Substitute (y = 1) into one equation:
 
 $$
-\begin{gather}
+\begin{gather*}
 7x + 9y = 30 \\
 7x + 9(1) = 30 \\
 7x + 9 = 30 \\
 7x = 21 \\
 x = 3
-\end{gather}
+\end{gather*}
 $$
 
 ---
@@ -212,7 +212,7 @@ $$
 
 $$
 
-\begin{gather}
+\begin{gather*}
 \begin{bmatrix}
 1 & 3 \\
 0 & 9
@@ -226,7 +226,7 @@ y
 7 \\
 18
 \end{bmatrix}
-\end{gather}
+\end{gather*}
 
 
 $$
@@ -235,10 +235,10 @@ Convert to equations:
 
 $$
 
-\begin{gather}
+\begin{gather*}
 x + 3y = 7 \\
 9y = 18
-\end{gather}
+\end{gather*}
 
 
 $$
