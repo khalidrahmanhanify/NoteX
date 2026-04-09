@@ -94,6 +94,16 @@ const direction = isRTL ? "rtl" : "ltr";
     border-bottom: 1px dashed var(--accent);
   }
 
+  /* 7. Responsive Images */
+  .markdown-body img {
+    max-width: 100%; /* Prevents image from being wider than the phone screen */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes bottom whitespace/gap */
+    margin: 2rem auto; /* Centers images and adds vertical spacing */
+    border-radius: 8px; /* Optional: matches your table/code block styling */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Optional: subtle depth */
+  }
+
   /* 3. Lists & Tables */
   .markdown-body ul,
   .markdown-body ol {
