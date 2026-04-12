@@ -8,11 +8,6 @@ date: 2026-04-12
 order: 12
 ---
 
-Here is your **improved, corrected, and exam-ready version** of the notes.
-All **corrections and important additions are clearly highlighted**.
-
----
-
 # 📁 Files in Python (Improved Notes)
 
 Python allows us to **work with files stored on the operating system (OS)** using built-in functions.
@@ -394,11 +389,3 @@ You should understand:
 ✔ Loops (`for`, `while`, `break`, `continue`)
 ✔ `for-else` concept (**very important**)
 ✔ `with open()` (**best practice**)
-
----
-
-If you want, I can turn this into:
-
-- 🔥 MCQs for exam practice
-- 💻 Coding exercises
-- 🧠 Quick revision sheet (1-page)
