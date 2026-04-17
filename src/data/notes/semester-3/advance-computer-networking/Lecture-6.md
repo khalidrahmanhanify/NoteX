@@ -1,6 +1,6 @@
 ---
-title: Routing
-description: All about routing, static, dynamic and default routing and configuring static routing.
+title: Dynamic Routing and Routing Protocols
+description: Overview of dynamic routing, routing vs routed protocols, IGP vs EGP, distance vector, link-state and hybrid protocols, metrics, and administrative distance.
 lecture: Lecture 6
 semester: semester-3
 subject: advance-computer-networking
