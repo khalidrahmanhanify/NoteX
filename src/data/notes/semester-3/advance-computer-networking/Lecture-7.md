@@ -1,5 +1,5 @@
 ---
-title: RIP (Routinf Information Protocol)
+title: RIP (Routing Information Protocol)
 description: All about RIP, RIP Versions, Configuring RIP in a network.
 lecture: Lecture 7
 semester: semester-3
