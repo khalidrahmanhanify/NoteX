@@ -1,6 +1,6 @@
 ---
-title: Data Structures in Python
-description: All about lists, tuples, dictionaries, and sets, along with their functions and usage.
+title: File Handling, OS Module, and Control Structures in Python
+description: Working with files in Python including file modes, reading, writing, cursor control (seek, tell), OS module operations, and control statements such as conditionals and loops.
 lecture: Lecture 5
 semester: semester-3
 subject: modern-programming-languages
