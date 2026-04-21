@@ -4,7 +4,7 @@ description: All about variables, naming conventions, operators and etc.
 lecture: Lecture 2
 semester: semester-3
 subject: modern-programming-languages
-date: 2026-03-08
+date: 2026-03-15
 order: 15
 ---
 

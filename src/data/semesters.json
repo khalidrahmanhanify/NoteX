@@ -540,12 +540,32 @@
           {
             "title": "Slide 1",
             "file": "/materials/semester-3/modern-programming-languages/lecture-1.pdf",
-            "date": "2025-08-10"
+            "date": "2026-03-08"
           },
           {
             "title": "Slide 2",
             "file": "/materials/semester-3/modern-programming-languages/lecture-2.pdf",
-            "date": "2025-08-17"
+            "date": "2026-03-15"
+          },
+          {
+            "title": "Slide 3",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-3.pdf",
+            "date": "2026-03-29"
+          },
+          {
+            "title": "Slide 4",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-4.pdf",
+            "date": "2026-04-05"
+          },
+          {
+            "title": "Slide 5",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-5.pdf",
+            "date": "2026-04-12"
+          },
+          {
+            "title": "Slide 6",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-6.pdf",
+            "date": "2026-04-19"
           }
         ],
         "videos": [
@@ -571,22 +591,82 @@
           {
             "title": "Slide 1",
             "file": "/materials/semester-3/social-system-of-islam/lecture-1.pdf",
-            "date": "2025-08-11"
+            "date": "2026-03-09"
           },
           {
             "title": "Slide 2",
             "file": "/materials/semester-3/social-system-of-islam/lecture-2.pdf",
-            "date": "2025-08-18"
+            "date": "2026-03-16"
           },
           {
             "title": "Slide 3",
             "file": "/materials/semester-3/social-system-of-islam/lecture-3.pdf",
-            "date": "2025-08-25"
+            "date": "2026-03-23"
           },
           {
-            "title": "Slide 4",
+            "title": "Lecture 4",
             "file": "/materials/semester-3/social-system-of-islam/lecture-4.pdf",
-            "date": "2025-09-01"
+            "date": "2026-03-30"
+          },
+          {
+            "title": "Lecture 5",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-5.pdf",
+            "date": "2026-04-06"
+          },
+          {
+            "title": "Lecture 6",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-6.pdf",
+            "date": "2026-04-13"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-7.pdf",
+            "date": "2026-04-20"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-8.pdf",
+            "date": "2026-04-27"
+          },
+          {
+            "title": "Lecture 9",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-9.pdf",
+            "date": "2026-05-04"
+          },
+          {
+            "title": "Lecture 10",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-10.pdf",
+            "date": "2026-05-11"
+          },
+          {
+            "title": "Lecture 11",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-11.pdf",
+            "date": "2026-05-18"
+          },
+          {
+            "title": "Lecture 12",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-12.pdf",
+            "date": "2026-05-25"
+          },
+          {
+            "title": "Lecture 13",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-13.pdf",
+            "date": "2026-06-01"
+          },
+          {
+            "title": "Lecture 14",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-14.pdf",
+            "date": "2026-06-08"
+          },
+          {
+            "title": "Lecture 15",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-15.pdf",
+            "date": "2026-06-15"
+          },
+          {
+            "title": "Lecture 16",
+            "file": "/materials/semester-3/social-system-of-islam/lecture-16.pdf",
+            "date": "2026-06-22"
           }
         ]
       },
@@ -607,22 +687,82 @@
           {
             "title": "Slide 1",
             "file": "/materials/semester-3/ethical-system-of-islam/lecture-1.pdf",
-            "date": "2025-08-11"
+            "date": "2026-03-09"
           },
           {
             "title": "Slide 2",
             "file": "/materials/semester-3/ethical-system-of-islam/lecture-2.pdf",
-            "date": "2025-08-18"
+            "date": "2026-03-16"
           },
           {
             "title": "Slide 3",
             "file": "/materials/semester-3/ethical-system-of-islam/lecture-3.pdf",
-            "date": "2025-08-25"
+            "date": "2026-03-23"
           },
           {
             "title": "Slide 4",
             "file": "/materials/semester-3/ethical-system-of-islam/lecture-4.pdf",
-            "date": "2025-09-01"
+            "date": "2026-03-30"
+          },
+          {
+            "title": "Slide 5",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-5.pdf",
+            "date": "2026-04-06"
+          },
+          {
+            "title": "Slide 6",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-6.pdf",
+            "date": "2026-04-13"
+          },
+          {
+            "title": "Slide 7",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-7.pdf",
+            "date": "2026-04-20"
+          },
+          {
+            "title": "Slide 8",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-8.pdf",
+            "date": "2026-04-27"
+          },
+          {
+            "title": "Slide 9",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-9.pdf",
+            "date": "2026-05-04"
+          },
+          {
+            "title": "Slide 10",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-10.pdf",
+            "date": "2026-05-11"
+          },
+          {
+            "title": "Slide 11",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-11.pdf",
+            "date": "2026-05-18"
+          },
+          {
+            "title": "Slide 12",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-12.pdf",
+            "date": "2026-05-25"
+          },
+          {
+            "title": "Slide 13",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-13.pdf",
+            "date": "2026-06-01"
+          },
+          {
+            "title": "Slide 14",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-14.pdf",
+            "date": "2026-06-08"
+          },
+          {
+            "title": "Slide 15",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-15.pdf",
+            "date": "2026-06-15"
+          },
+          {
+            "title": "Slide 16",
+            "file": "/materials/semester-3/ethical-system-of-islam/lecture-16.pdf",
+            "date": "2026-06-22"
           }
         ]
       },
@@ -642,17 +782,37 @@
           {
             "title": "Slide 1",
             "file": "/materials/semester-3/linear-algebra/lecture-1.pdf",
-            "date": "2025-08-12"
+            "date": "2026-03-10"
           },
           {
             "title": "Slide 2",
             "file": "/materials/semester-3/linear-algebra/lecture-2.pdf",
-            "date": "2025-08-19"
+            "date": "2026-03-17"
           },
           {
             "title": "Slide 3",
             "file": "/materials/semester-3/linear-algebra/lecture-3.pdf",
-            "date": "2025-08-26"
+            "date": "2026-03-24"
+          },
+          {
+            "title": "Slide 4",
+            "file": "/materials/semester-3/linear-algebra/lecture-4.pdf",
+            "date": "2026-04-07"
+          },
+          {
+            "title": "Slide 5",
+            "file": "/materials/semester-3/linear-algebra/lecture-5.pdf",
+            "date": "2026-04-14"
+          },
+          {
+            "title": "Slide 6",
+            "file": "/materials/semester-3/linear-algebra/lecture-6.pdf",
+            "date": "2026-04-21"
+          },
+          {
+            "title": "Slide 7",
+            "file": "/materials/semester-3/linear-algebra/lecture-7.pdf",
+            "date": "2026-04-25"
           }
         ]
       },
@@ -668,6 +828,26 @@
           {
             "title": "Course Policy",
             "file": "/materials/semester-3/data-structures-and-algorithms/course-policy.pdf"
+          },
+          {
+            "title": "Slide 1",
+            "file": "/materials/semester-3/data-structures-and-algorithms/lecture-1.pdf",
+            "date": "2026-03-11"
+          },
+          {
+            "title": "Slide 2",
+            "file": "/materials/semester-3/data-structures-and-algorithms/lecture-2.pdf",
+            "date": "2026-04-01"
+          },
+          {
+            "title": "Slide 3",
+            "file": "/materials/semester-3/data-structures-and-algorithms/lecture-3.pdf",
+            "date": "2026-04-08"
+          },
+          {
+            "title": "Slide 4",
+            "file": "/materials/semester-3/data-structures-and-algorithms/lecture-4.pdf",
+            "date": "2026-04-15"
           }
         ]
       },
@@ -687,17 +867,37 @@
           {
             "title": "Slide 1",
             "file": "/materials/semester-3/advance-computer-networking/lecture-1.pdf",
-            "date": "2025-08-14"
+            "date": "2026-03-12"
           },
           {
             "title": "Slide 2",
             "file": "/materials/semester-3/advance-computer-networking/lecture-2.pdf",
-            "date": "2025-08-21"
+            "date": "2026-03-19"
           },
           {
             "title": "Slide 3",
             "file": "/materials/semester-3/advance-computer-networking/lecture-3.pdf",
-            "date": "2025-08-28"
+            "date": "2026-03-26"
+          },
+          {
+            "title": "Slide 4",
+            "file": "/materials/semester-3/advance-computer-networking/lecture-4.pdf",
+            "date": "2026-04-02"
+          },
+          {
+            "title": "Slide 5",
+            "file": "/materials/semester-3/advance-computer-networking/lecture-5.pdf",
+            "date": "2026-04-09"
+          },
+          {
+            "title": "Slide 6",
+            "file": "/materials/semester-3/advance-computer-networking/lecture-6.pdf",
+            "date": "2026-04-16"
+          },
+          {
+            "title": "Slide 7",
+            "file": "/materials/semester-3/advance-computer-networking/lecture-7.pdf",
+            "date": "2026-04-23"
           }
         ],
         "videos": [
