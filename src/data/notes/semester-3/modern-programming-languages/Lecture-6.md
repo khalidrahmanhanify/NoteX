@@ -1,5 +1,5 @@
 ---
-title: Functions and Object-Oriented Programming in Python
+title: Functions in Python
 description: Understanding functions in Python including creation, calling, parameters, scope, and introduction to classes and objects for basic object-oriented programming.
 lecture: Lecture 6
 semester: semester-3
