@@ -571,6 +571,26 @@
             "title": "Slide 7",
             "file": "/materials/semester-3/modern-programming-languages/lecture-7.pdf",
             "date": "2026-04-26"
+          },
+          {
+            "title": "Slide 8",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-8.pdf",
+            "date": "2026-05-24"
+          },
+          {
+            "title": "Slide 9",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-9.pdf",
+            "date": "2026-05-31"
+          },
+          {
+            "title": "Slide 10",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-10.pdf",
+            "date": "2026-05-31"
+          },
+          {
+            "title": "Slide 11",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-11.pdf",
+            "date": "2026-06-07"
           }
         ],
         "videos": [
@@ -817,7 +837,17 @@
           {
             "title": "Slide 7",
             "file": "/materials/semester-3/linear-algebra/lecture-7.pdf",
-            "date": "2026-04-25"
+            "date": "2026-04-23"
+          },
+          {
+            "title": "Slide 8",
+            "file": "/materials/semester-3/linear-algebra/lecture-8.pdf",
+            "date": "2026-04-28"
+          },
+          {
+            "title": "Slide 9",
+            "file": "/materials/semester-3/linear-algebra/lecture-9.pdf",
+            "date": "2026-06-02"
           }
         ]
       },

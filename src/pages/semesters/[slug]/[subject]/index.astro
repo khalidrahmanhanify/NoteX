@@ -31,15 +31,23 @@ export const getStaticPaths = (async () => {
 
   return paths;
 }) satisfies GetStaticPaths;
+
 const { slug } = Astro.params;
 const { semester, subject } = Astro.props;
-const notes = await getCollection("notes", (note) => {
+
+// Fetch the notes matching the current subject and semester
+const rawNotes = await getCollection("notes", (note) => {
   const formattedSubject = subject.subjectName
     .toLowerCase()
     .split(" ")
     .join("-");
   return note.data.subject === formattedSubject && semester.data.slug === slug;
 });
+
+// Sort the notes in descending order (highest 'order' number first)
+const notes = rawNotes.sort(
+  (a, b) => (b.data.order ?? 0) - (a.data.order ?? 0),
+);
 
 const coursePolicy = subject.materials[0];
 const slides = subject.materials.slice(1);
@@ -56,14 +64,23 @@ const previousPage =
       <div class="download-group">
         <h3 class="group-title">Documents</h3>
         <hr class="hr" />
-        <a href={coursePolicy.file} class="download-card">
-          <span class="icon"><Icon name="policy" /></span>
-          <div class="text">
-            <span class="name">Course Policy</span>
-            <span class="sub">Click to Download PDF</span>
-          </div>
-          <span class="dl-icon"> <Icon name="download" /></span>
-        </a>
+        {
+          coursePolicy && (
+            <a href={coursePolicy.file} class="download-card">
+              <span class="icon">
+                <Icon name="policy" />
+              </span>
+              <div class="text">
+                <span class="name">Course Policy</span>
+                <span class="sub">Click to Download PDF</span>
+              </div>
+              <span class="dl-icon">
+                {" "}
+                <Icon name="download" />
+              </span>
+            </a>
+          )
+        }
       </div>
       <div class="download-group">
         <h3 class="group-title">Lecture Slides</h3>
