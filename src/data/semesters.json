@@ -591,12 +591,80 @@
             "title": "Slide 11",
             "file": "/materials/semester-3/modern-programming-languages/lecture-11.pdf",
             "date": "2026-06-07"
+          },
+          {
+            "title": "Slide 12",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-12.pdf",
+            "date": "2026-06-14"
+          },
+          {
+            "title": "Slide 13",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-13.pdf",
+            "date": "2026-06-21"
+          },
+          {
+            "title": "Slide 14",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-14.pdf",
+            "date": "2026-06-28"
+          },
+          {
+            "title": "Slide 15",
+            "file": "/materials/semester-3/modern-programming-languages/lecture-15.pdf",
+            "date": "2026-06-05"
           }
         ],
         "videos": [
           {
             "title": "Full Python Course | With Mosh Hamedani",
             "youtubeId": "_uQrJ0TkZlc"
+          },
+          {
+            "title": "MPL Lec 2: Python Boolean Logic, Operators & If Statements",
+            "youtubeId": "j7NAJbYIfpE"
+          },
+          {
+            "title": "MPL Lec 3: Python Data Types, String Indexing & Math Ops",
+            "youtubeId": "zZpnEq7X2M0"
+          },
+          {
+            "title": "MPL Lec 4: Python Data Structures Deep Dive",
+            "youtubeId": "UV9Dz8lljoU"
+          },
+          {
+            "title": "MPL Lec 5: Python File Handling, OS Operations & Loops",
+            "youtubeId": "LuvK7IRBkow"
+          },
+          {
+            "title": "MPL Lec 7: Python Functions, Default Args & Variable Scope",
+            "youtubeId": "d9b5o1aAlKA"
+          },
+          {
+            "title": "MPL Lec 8: Python Error Handling, Finally & Custom Exceptions",
+            "youtubeId": "-V6LleX9BHU"
+          },
+          {
+            "title": "MPL Lec 9: Python OOP, __init__, Inheritance & Polymorphism",
+            "youtubeId": "mbRHpAMvZAA"
+          },
+          {
+            "title": "MPL Lec 10: Python GUI Development using Tkinter",
+            "youtubeId": "OHCBvP46X80"
+          },
+          {
+            "title": "MPL Lec 11: Plotting Data & Charts with Matplotlib",
+            "youtubeId": "c_N8Il5-E8w"
+          },
+          {
+            "title": "MPL Lec 12: Python CSV Data Processing & Matplotlib Charts",
+            "youtubeId": "ZYRm8c6ta-I"
+          },
+          {
+            "title": "MPL Lec 13: Data Science with Pandas & Scikit-Learn",
+            "youtubeId": "4crHa9cVheA"
+          },
+          {
+            "title": "MPL Lec 14: Connecting Python to MySQL & SQLite Databases",
+            "youtubeId": "6yJZ6_7jnUw"
           }
         ]
       },
@@ -848,6 +916,31 @@
             "title": "Slide 9",
             "file": "/materials/semester-3/linear-algebra/lecture-9.pdf",
             "date": "2026-06-02"
+          },
+          {
+            "title": "Slide 9 - 10",
+            "file": "/materials/semester-3/linear-algebra/lecture-9-10.pdf",
+            "date": "2026-06-09"
+          },
+          {
+            "title": "Slide 11",
+            "file": "/materials/semester-3/linear-algebra/lecture-11.pdf",
+            "date": "2026-06-16"
+          },
+          {
+            "title": "Slide 12",
+            "file": "/materials/semester-3/linear-algebra/lecture-12.pdf",
+            "date": "2026-06-23"
+          },
+          {
+            "title": "Slide 13",
+            "file": "/materials/semester-3/linear-algebra/lecture-13.pdf",
+            "date": "2026-06-30"
+          },
+          {
+            "title": "Slide 14 - 15",
+            "file": "/materials/semester-3/linear-algebra/lecture-14-15.pdf",
+            "date": "2026-07-07"
           }
         ]
       },
