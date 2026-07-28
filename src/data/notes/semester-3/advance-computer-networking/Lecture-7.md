@@ -1,6 +1,6 @@
 ---
-title: RIP (Routing Information Protocol)
-description: All about RIP, RIP Versions, Configuring RIP in a network.
+title: Routing Information Protocol (RIP)
+description: Learn RIP characteristics, versions, configuration, and differences between RIPv1 and RIPv2.
 lecture: Lecture 7
 semester: semester-3
 subject: advance-computer-networking
@@ -8,280 +8,434 @@ date: 2026-04-16
 order: 10
 ---
 
-# Distance Vector Routing Protocol (RIP)
+# Routing Information Protocol (RIP)
 
 ## Definition
 
-A **Distance Vector Routing Protocol** is a routing method where routers share information about:
+**Routing Information Protocol (RIP)** is a **Distance Vector Routing Protocol** that automatically exchanges routing information between routers. It determines the best path based on **Hop Count** and is designed for **small networks**.
 
-- Distance (metric)
-- Direction (next hop)
+---
 
-**RIP (Routing Information Protocol)** is a simple distance vector protocol that uses **hop count** to determine the best path.
+# Distance Vector Protocol Review
+
+## Definition
+
+A **Distance Vector (DV)** routing protocol shares its **entire routing table** with directly connected neighbors at regular intervals.
+
+Routers trust the routing information received from neighboring routers without independently verifying every route. This behavior is known as **Routing by Rumor**.
 
 ---
 
 ## Key Points
 
-- RIP = **Routing Information Protocol**
-- Type: **Distance Vector**
-- Metric: **Hop Count**
-- Maximum hops: **15**
-  → Hop **16 = unreachable**
-- Administrative Distance (AD): **120**
-- Updates sent every **30 seconds**
-- Works best in **small networks**
-- Supports **equal-cost load balancing** (up to 4 by default, 6 maximum)
-
-> 💡 Load Balancing: Traffic is distributed equally across multiple equal-cost paths.
+- Routers exchange their **complete routing tables**.
+- Updates are sent to **directly connected neighbors**.
+- Each router combines received routes with its own routing table.
+- The best route is selected based on the routing protocol's metric.
+- If multiple routing protocols advertise the same destination, **Administrative Distance (AD)** determines which route is preferred.
 
 ---
 
-## Example / Code
+## Examples of Distance Vector Protocols
+
+- **RIP (Routing Information Protocol)**
+- **IGRP (Interior Gateway Routing Protocol)** _(obsolete; no longer supported by Cisco)_
+
+---
+
+# RIP Characteristics
+
+## Definition
+
+RIP is one of the oldest and simplest dynamic routing protocols.
+
+---
+
+## Key Characteristics
+
+- **Routing Protocol:** RIP (Routing Information Protocol)
+- **Routing Type:** Distance Vector
+- **Default Administrative Distance (AD):** **120**
+- **Metric:** Hop Count
+- **Maximum Hop Count:** **15**
+- **Hop 16:** Destination is considered **unreachable**
+- **Update Interval:** Every **30 seconds**
+- Best suited for **small networks**
+- Supports **Equal-Cost Load Balancing**
+  - Default: **4 paths**
+  - Maximum: **6 equal-cost paths** (platform dependent)
+
+---
+
+## Hop Count
+
+A **Hop** is one router crossed by a packet.
+
+Example:
 
 ```text
-Router(config)# router rip
-Router(config-router)# network 192.168.1.0
-Router(config-router)# network 192.168.2.0
-Router(config-router)# network 192.168.3.0
-Router(config-router)# network 192.168.4.0
-
-Router(config-router)# passive-interface serial 2/0
-Router(config-router)# do show ip route
+PC
+ │
+R1
+ │
+R2
+ │
+R3
+ │
+Server
 ```
 
----
+Hop Count = **3**
 
-## Explanation
-
-- `router rip` → Enables RIP routing
-- `network` → Advertises connected networks
-- `passive-interface` → Stops sending updates on that interface
-- `show ip route` → Displays routing table
-
----
-
-## Output (if any)
-
-Example routing table entry:
-
-```text
-R 192.168.2.0/24 [120/1] via 192.168.1.1
-```
-
-- `R` → Learned via RIP
-- `120` → Administrative Distance
-- `1` → Hop count
-
----
-
-## Common Mistakes
-
-- ❌ Using RIP in large networks (not scalable)
-- ❌ Forgetting hop limit (15 max)
-- ❌ Misunderstanding load balancing (only equal-cost paths)
-- ❌ Not enabling correct networks
-- ❌ Confusing classful vs classless behavior
-
----
-
-## Short Exam Notes (very concise revision points)
-
-- RIP = Distance Vector
-- Metric = Hop count
-- Max hops = 15
-- AD = 120
-- Updates every 30s
-- Small networks only
+RIP always prefers the route with the **fewest hops**.
 
 ---
 
 # RIP Versions
 
-## Definition
+There are three versions of RIP.
 
-RIP has multiple versions with different capabilities for IPv4 and IPv6.
-
----
-
-## Key Points
-
-- **RIPv1**
-  - Classful (no subnet mask info)
-  - No VLSM support
-  - Broadcast updates
-
-- **RIPv2**
-  - Classless (supports subnet masks)
-  - Supports VLSM
-  - Uses multicast (224.0.0.9)
-  - Supports authentication (MD5 / plaintext)
-
-- **RIPng**
-  - Used for **IPv6**
+| Version | IP Version | Supports VLSM | Routing Type |
+| ------- | ---------- | ------------- | ------------ |
+| RIPv1   | IPv4       | ❌ No         | Classful     |
+| RIPv2   | IPv4       | ✅ Yes        | Classless    |
+| RIPng   | IPv6       | ✅ Yes        | Classless    |
 
 ---
 
-## Example / Code
+## Neighbor Command
 
-```text
-Router(config)# router rip
-Router(config-router)# version 2
-Router(config-router)# network 192.168.1.0
+```bash
+neighbor 192.168.20.2
 ```
 
----
+Normally, RIP sends routing updates using **broadcast (RIPv1)** or **multicast (RIPv2)**.
 
-## Explanation
-
-- `version 2` enables **RIPv2**
-- RIPv2 improves efficiency using multicast instead of broadcast
-- Supports modern subnetting (VLSM)
-
----
-
-## Output (if any)
-
-Routing table still shows:
-
-```text
-R 192.168.1.0/24 [120/1] via 192.168.1.1
-```
-
----
-
-## Common Mistakes
-
-- ❌ Using RIPv1 with VLSM networks
-- ❌ Forgetting to enable version 2
-- ❌ Confusing multicast vs broadcast
-
----
-
-## Short Exam Notes (very concise revision points)
-
-- RIPv1 = Classful
-- RIPv2 = Classless + VLSM
-- RIPng = IPv6
-- Multicast: 224.0.0.9
+The `neighbor` command changes routing updates to **unicast**, sending updates only to the specified neighbor.
 
 ---
 
 # RIP Message Types
 
+RIP uses two message types.
+
+## 1. Request Message
+
+Purpose:
+
+- Sent when a RIP-enabled interface starts.
+- Requests routing information from neighboring routers.
+
+---
+
+## 2. Response Message
+
+Purpose:
+
+- Sent in reply to a Request message.
+- Contains the router's routing table.
+
+---
+
+# RIPv1
+
 ## Definition
 
-RIP uses specific messages to exchange routing information between routers.
+**RIPv1** is the original version of RIP.
+
+It is a **Classful Distance Vector Routing Protocol**, meaning it does **not** include subnet mask information in routing updates.
 
 ---
 
-## Key Points
+## Characteristics
 
-- **Request Message**
-  - Sent when router starts
-  - Asks neighbors for routing table
-
-- **Response Message**
-  - Contains routing table
-  - Sent as reply or periodic update
-
----
-
-## Example / Code
-
-(No direct CLI command — happens automatically when RIP is enabled)
+- IPv4 only
+- Classful routing
+- No VLSM support
+- Uses Broadcast
+- No authentication
+- Hop Count metric
+- Maximum 15 hops
 
 ---
 
-## Explanation
+# RIPv1 Configuration
 
-- When a router starts → sends **Request**
-- Neighbor routers reply with **Response**
-- Periodically, routers send responses every **30 seconds**
+## Enable RIP
+
+```bash
+R1(config)# router rip
+```
+
+Starts the RIP routing process.
 
 ---
 
-## Output (if any)
+## Advertise Networks
 
-(Not directly visible, but affects routing table updates)
+```bash
+R1(config-router)# network 192.168.10.0
+R1(config-router)# network 192.168.20.0
+R1(config-router)# network 192.168.30.0
+R1(config-router)# network 192.168.40.0
+```
+
+Each `network` command enables RIP on interfaces that belong to that network and advertises those networks to neighboring routers.
+
+---
+
+## Display Routing Table
+
+```bash
+R1(config-router)# do show ip route
+```
+
+Displays the routing table without leaving configuration mode.
+
+---
+
+## Passive Interface
+
+```bash
+R1(config-router)# passive-interface Serial2/0
+```
+
+Stops RIP updates from being sent out of the specified interface while still allowing the connected network to be advertised.
+
+---
+
+## Neighbor Command
+
+```bash
+R1(config-router)# neighbor 192.168.20.2
+```
+
+Sends routing updates directly to the specified neighbor using **unicast**.
+
+---
+
+# RIPv2
+
+## Definition
+
+**RIPv2** is an enhanced version of RIPv1.
+
+It is a **Classless Distance Vector Routing Protocol** that supports modern IP addressing features such as **VLSM** and **CIDR**.
+
+---
+
+## Characteristics
+
+- IPv4
+- Classless
+- Supports VLSM
+- Supports CIDR
+- Uses Multicast
+- Supports Authentication
+- Hop Count metric
+- Maximum 15 hops
+
+---
+
+# RIPv1 vs RIPv2
+
+| Feature                 | RIPv1     | RIPv2                 |
+| ----------------------- | --------- | --------------------- |
+| Routing Type            | Classful  | Classless             |
+| IPv4 Support            | Yes       | Yes                   |
+| Maximum Hop Count       | 15        | 15                    |
+| Authentication          | No        | MD5 or Plain Text     |
+| Updates                 | Broadcast | Multicast (224.0.0.9) |
+| VLSM Support            | No        | Yes                   |
+| CIDR Support            | No        | Yes                   |
+| Administrative Distance | 120       | 120                   |
+
+---
+
+# RIPv2 Configuration
+
+## Enable RIP
+
+```bash
+R1(config)# router rip
+```
+
+Starts the RIP routing process.
+
+---
+
+## Enable Version 2
+
+```bash
+R1(config-router)# version 2
+```
+
+Enables RIPv2.
+
+---
+
+## Disable Auto Summarization
+
+```bash
+R1(config-router)# no auto-summary
+```
+
+Disables automatic route summarization at classful network boundaries.
+
+This is recommended when using VLSM or discontiguous networks.
+
+---
+
+## Advertise Networks
+
+```bash
+R1(config-router)# network 192.168.10.0
+R1(config-router)# network 192.168.20.0
+R1(config-router)# network 192.168.30.0
+R1(config-router)# network 192.168.40.0
+```
+
+Advertises the specified networks.
+
+---
+
+# Advertising a Default Route Using RIP
+
+A router can advertise a default route to all RIP neighbors.
+
+## Step 1: Configure the Default Route
+
+```bash
+Router(config)# ip route 0.0.0.0 0.0.0.0 14.0.0.4
+```
+
+This creates a static default route.
+
+---
+
+## Step 2: Enable RIP
+
+```bash
+Router(config)# router rip
+```
+
+Starts the RIP routing process.
+
+---
+
+## Step 3: Advertise the Default Route
+
+```bash
+Router(config-router)# default-information originate
+```
+
+This instructs RIP to advertise the configured default route to neighboring routers.
+
+---
+
+# RIP Configuration Example
+
+```bash
+Router(config)# router rip
+Router(config-router)# version 2
+Router(config-router)# no auto-summary
+Router(config-router)# network 192.168.1.0
+Router(config-router)# network 192.168.2.0
+```
+
+### Line-by-Line Explanation
+
+| Command               | Purpose                           |
+| --------------------- | --------------------------------- |
+| `router rip`          | Starts RIP.                       |
+| `version 2`           | Uses RIPv2.                       |
+| `no auto-summary`     | Disables automatic summarization. |
+| `network 192.168.1.0` | Advertises the first network.     |
+| `network 192.168.2.0` | Advertises the second network.    |
+
+---
+
+# RIP vs IGRP
+
+## Definition
+
+Both RIP and IGRP are **Distance Vector** routing protocols.
+
+However, IGRP was a Cisco proprietary protocol and is now obsolete.
+
+---
+
+## Differences
+
+| RIP                                       | IGRP                                                    |
+| ----------------------------------------- | ------------------------------------------------------- |
+| Open standard                             | Cisco proprietary                                       |
+| Uses Hop Count                            | Uses Bandwidth, Delay, Reliability, and Load            |
+| Administrative Distance = 120             | Administrative Distance = 100                           |
+| Maximum Hop Count = 15                    | Maximum Hop Count = 255 (100 recommended)               |
+| No Autonomous System (AS) number required | Routers must use the same Autonomous System (AS) number |
+| Still supported (RIPv2)                   | No longer supported by Cisco                            |
+
+---
+
+# Explanation
+
+## How RIP Works
+
+1. RIP is enabled on participating routers.
+2. Routers discover directly connected networks.
+3. Every **30 seconds**, routers exchange routing tables with neighbors.
+4. Each router updates its routing table based on received information.
+5. Routes with the **lowest hop count** are selected.
+6. If multiple equal-cost routes exist, RIP performs load balancing.
+
+---
+
+## Routing by Rumor
+
+Distance Vector protocols do not maintain a complete map of the network.
+
+Instead:
+
+- A router trusts information received from neighboring routers.
+- It assumes the neighbor's information is correct.
+- Therefore, Distance Vector routing is often called **Routing by Rumor**.
+
+---
+
+## Why RIPv2 Is Better Than RIPv1
+
+- Supports **VLSM**.
+- Supports **CIDR**.
+- Includes subnet masks in routing updates.
+- Supports authentication.
+- Uses multicast instead of broadcast, reducing unnecessary traffic.
 
 ---
 
 ## Common Mistakes
 
-- ❌ Thinking messages must be configured manually
-- ❌ Not understanding startup behavior
+- Confusing **Hop Count** with **Administrative Distance**.
+- Forgetting that RIP cannot route beyond **15 hops**.
+- Assuming RIPv1 supports VLSM—it does **not**.
+- Forgetting to configure `version 2` when using RIPv2.
+- Forgetting `no auto-summary` in networks using VLSM or discontiguous addressing.
+- Thinking RIP is suitable for large enterprise networks; it is intended for **small networks**.
+- Confusing **Broadcast (RIPv1)** with **Multicast (RIPv2)** updates.
 
 ---
 
-## Short Exam Notes (very concise revision points)
+## Short Exam Notes
 
-- Request → ask for routes
-- Response → send routes
-- Auto process
-
----
-
-# Difference Between RIP and IGRP
-
-## Definition
-
-RIP and **IGRP (Interior Gateway Routing Protocol)** are both distance vector protocols but differ in performance and scalability.
-
----
-
-## Key Points
-
-| Feature      | RIP       | IGRP              |
-| ------------ | --------- | ----------------- |
-| Network Size | Small     | Large             |
-| Metric       | Hop count | Bandwidth + delay |
-| Max Hops     | 15        | 255               |
-| AD           | 120       | 100               |
-| Update Time  | 30 sec    | 90 sec            |
-| AS Number    | Not used  | Required          |
-
----
-
-## Example / Code
-
-```text
-RIP: router rip
-IGRP: router igrp 1
-```
-
----
-
-## Explanation
-
-- RIP is simple but limited
-- IGRP is more advanced (uses composite metric)
-- Lower AD (100) means IGRP is preferred over RIP
-
----
-
-## Output (if any)
-
-Example:
-
-```text
-I 192.168.1.0/24 [100/10] via 192.168.1.1
-R 192.168.2.0/24 [120/1] via 192.168.1.2
-```
-
----
-
-## Common Mistakes
-
-- ❌ Thinking RIP is better for large networks
-- ❌ Ignoring AD when comparing protocols
-- ❌ Forgetting IGRP uses multiple metrics
-
----
-
-## Short Exam Notes (very concise revision points)
-
-- RIP → simple, small networks
-- IGRP → advanced, larger networks
-- RIP AD = 120, IGRP AD = 100
-- RIP = hop count, IGRP = bandwidth + delay
+- **RIP:** Distance Vector routing protocol.
+- **Metric:** Hop Count.
+- **Administrative Distance:** 120.
+- **Maximum Hop Count:** 15 (16 = unreachable).
+- **Routing Updates:** Every 30 seconds.
+- **RIPv1:** Classful, Broadcast, No VLSM, No Authentication.
+- **RIPv2:** Classless, Multicast (224.0.0.9), Supports VLSM/CIDR, Supports Authentication.
+- **RIPng:** RIP for IPv6.
+- **Passive Interface:** Stops sending RIP updates on an interface while still advertising its network.
+- **`default-information originate`:** Advertises the default route through RIP.
+- **IGRP:** Cisco proprietary Distance Vector protocol, now obsolete.
+- **Distance Vector:** Exchanges complete routing tables with neighbors ("Routing by Rumor").

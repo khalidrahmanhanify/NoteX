@@ -1,6 +1,6 @@
 ---
 title: Network Fundamentals
-description: Introduction to network, internetwork, benefits of networking, and types of networks including peer-to-peer and client-server.
+description: Learn networking basics, internetworking concepts, network benefits, and common network models.
 lecture: Lecture 1
 semester: semester-3
 subject: advance-computer-networking
@@ -8,208 +8,350 @@ date: 2026-03-12
 order: 16
 ---
 
-# Network Strategy
+# Network Fundamentals
 
-## Outline
+## Definition
 
-- What is Network / Internetwork
-- Types of Network
-- Benefits of Networks
+A **computer network** is a collection of interconnected devices (called **nodes**) that communicate with each other to share resources, exchange data, and access services.
 
-# What is a Network
+An **internetwork (Internetworking)** is the connection of two or more separate networks using routers, allowing devices on different networks to communicate.
 
-A **network** is a set of devices (**nodes**) connected by **communication links**.
+---
 
-A **node** can be:
+## Key Points
 
-- Computer
-- Printer
-- Switch
-- Router
-- Server
-- Any device that can **send or receive data**
+### What is a Network?
 
-Another definition:
+- A **network** is a group of devices connected through communication links.
+- Each connected device is called a **node**.
+- Examples of nodes:
+  - Computer
+  - Laptop
+  - Printer
+  - Switch
+  - Router
+  - Server
 
-A network is a **collection of hardware devices and software protocols** that connect computing devices.
+- Networks use **hardware devices** and **software protocols** to enable communication.
+- The primary purpose of a network is **resource sharing**.
 
-### Main Purpose of a Network
+### Resources Shared Over a Network
 
-The main purpose of a network is **resource sharing**, such as:
-
-- Data sharing
-- Internet sharing
-- Printer sharing
+- Files and folders
+- Internet connection
+- Printers
 - Applications
 - Storage
-- Other computational resources
+- Other computing resources
 
-# Internetwork
+---
 
-We use **hubs, bridges, and switches** to form a **network**.
+## Internetwork
 
-An **internetwork** is the **connection of two or more networks** for the purpose of sharing resources.
+An **internetwork** is formed by connecting multiple independent networks together.
 
-We use **routers** to connect **different networks** and form an internetwork.
+### Devices Used
 
-**We use routers**
+| Device     | Purpose                                                                                  |
+| ---------- | ---------------------------------------------------------------------------------------- |
+| **Hub**    | Connects multiple devices in a simple network. Broadcasts data to all connected devices. |
+| **Bridge** | Connects two similar LAN segments and filters traffic.                                   |
+| **Switch** | Connects devices efficiently by forwarding data only to the intended device.             |
+| **Router** | Connects different networks and routes data between them. Used to build an internetwork. |
 
-**Added Important Note:**
+> **Important:**
+>
+> - **Switches** create or extend a Local Area Network (LAN).
+> - **Routers** connect different networks together.
 
-- Switch → connects devices in **same network**
-- Router → connects **different networks**
+---
 
-# Benefits of Networks
+## Benefits of Networks
 
-## 1. Resource Sharing
+### 1. Resource Sharing
 
-Allows multiple devices to share:
+- Multiple users can share:
+  - Printers
+  - Files
+  - Internet connection
+  - Storage devices
 
-- Printers
-- Files
-- Internet
-- Applications
+- Reduces hardware costs.
 
-This reduces cost and increases efficiency.
+---
 
-## 2. Communication
+### 2. Communication
 
-Networks allow users to communicate using:
+Networks make communication easier through:
 
 - Email
-- Messaging
-- VoIP
+- Instant messaging
+- Voice calls (VoIP)
 - Video conferencing
+- File sharing
 
-## 3. Centralized Data Management
+---
 
-- Data stored in **central server**
-- Easy management
-- Easy backup
-- Better organization
+### 3. Centralized Data Management
 
-## 4. Scalability
+- Data can be stored on a **server**.
+- Easier to:
+  - Manage files
+  - Perform backups
+  - Control user access
+  - Maintain consistency
 
-Networks can be **expanded easily** by adding:
+---
+
+### 4. Scalability
+
+Networks can grow easily by adding:
 
 - New users
-- New devices
-- New services
+- Computers
+- Printers
+- Servers
 
-## 5. Cost Efficiency
+without major infrastructure changes.
 
-- Less hardware required
-- Shared software licenses
-- Reduced maintenance cost
+---
 
-## 6. Security
+### 5. Cost Efficiency
 
-Networks provide centralized security:
+Sharing resources reduces the need for:
+
+- Multiple printers
+- Extra storage devices
+- Duplicate software licenses
+
+This lowers maintenance and equipment costs.
+
+---
+
+### 6. Security
+
+Centralized security allows administrators to implement:
 
 - Firewalls
-- Access control
+- User authentication
 - Encryption
-- Authentication
+- Access control
+- Antivirus protection
 
-## 7. Remote Access
+---
 
-Users can access:
+### 7. Remote Access
+
+Authorized users can securely access:
 
 - Files
 - Applications
-- Systems
+- Company systems
 
-from **remote locations**.
+from remote locations.
 
-## 8. Reliability
+---
 
-If one device fails:
+### 8. Reliability
 
-- Network can still work
-- Alternative paths may exist
+If one network component fails, redundant paths or backup systems can keep services available.
 
-## 9. Backup and Recovery
+---
 
-- Centralized backup
-- Automated backups
-- Easy disaster recovery
-- Reduced data loss
+### 9. Backup and Recovery
 
-# Types of Network
+Network servers often perform:
 
-## 1. Workgroup / Homegroup / Peer-to-Peer Network
+- Automatic backups
+- Data recovery
+- Disaster recovery
 
-In this network **every computer acts as both:**
+This minimizes data loss.
 
-- Server
-- Client
+---
 
-Each computer decides:
+# Types of Networks
 
-- What to share
-- What not to share
+## 1. Peer-to-Peer (P2P) Network
 
-There is **no dedicated server**.
+### Definition
 
-### Advantages of Peer-to-Peer
+A **Peer-to-Peer (P2P)** network is a network in which every computer acts as both a **client** and a **server**.
+
+Each computer decides whether to share its own resources.
+
+This model is commonly used in:
+
+- Homes
+- Small offices
+- Small classrooms
+
+---
+
+## Advantages
 
 - Easy to install and configure
+- Low cost
 - No dedicated server required
-- Users control their own resources
-- Inexpensive to purchase and operate
-- No additional software required
-- No dedicated administrator required
+- No network administrator needed
+- Each user controls their own shared resources
+- Works well for small networks
 
-### Disadvantages of Peer-to-Peer
+---
 
-- Weak security
-- No centralized control
-- Multiple passwords required
-- Backup must be done on each machine
-- Difficult to manage data
-  **Not suitable for networks with more than 10 computers**
+## Disadvantages
 
-## 2. Domain-Based / Client-Server Network
+- Weak security because permissions are managed individually.
+- Users may need multiple passwords for different shared resources.
+- Every computer must maintain its own backup.
+- No centralized management of files and users.
+- Performance becomes poor when there are **more than 10 computers**.
 
-This network has:
+---
 
-- Dedicated **Server**
-- Multiple **Clients**
+## Example
 
-Server controls:
+```
+Computer A  ↔  Computer B
+      ↕             ↕
+Computer C  ↔  Computer D
+```
 
-- Users
+Every computer can both request and provide resources.
+
+---
+
+## 2. Client-Server (Domain-Based) Network
+
+### Definition
+
+A **Client-Server** network contains one or more dedicated **servers** that provide services to multiple **client** computers.
+
+The server manages:
+
+- User accounts
 - Security
-- Resources
-- Permissions
+- File storage
+- Applications
+- Network resources
 
-Clients depend on server.
+Clients depend on the server for authentication and access.
 
-### Advantages of Client-Server
+---
 
-- Centralized user accounts
+## Advantages
+
+- Centralized user management
 - Better security
-- Simplified administration
-- Efficient resource access
-- Single login password
-- Centralized backup
+- Easier administration
+- Efficient resource sharing
+- Single login gives access to multiple resources
+- Suitable for medium and large organizations
 
-### Disadvantages of Client-Server
+---
 
-- Server failure can affect entire network
-- Requires expert administrator
-- Higher cost
-- Dedicated hardware required
-- Specialized server software required
+## Disadvantages
 
-# Quick Comparison (Exam Important)
+- If the server fails, many network services become unavailable.
+- Requires dedicated server hardware.
+- Needs specialized server software.
+- Requires skilled administrators.
+- Higher installation and maintenance costs.
 
-| Peer to Peer        | Client Server    |
-| ------------------- | ---------------- |
-| No dedicated server | Dedicated server |
-| Low cost            | High cost        |
-| Easy setup          | Complex setup    |
-| Less secure         | More secure      |
-| No central control  | Central control  |
-| Small networks      | Large networks   |
-| Max ~10 computers   | Unlimited        |
+---
+
+## Example
+
+```
+          Server
+        /    |    \
+      PC1   PC2   PC3
+```
+
+The server controls access and provides services to all client computers.
+
+---
+
+## Comparison: Peer-to-Peer vs Client-Server
+
+| Feature        | Peer-to-Peer            | Client-Server                    |
+| -------------- | ----------------------- | -------------------------------- |
+| Server         | No dedicated server     | Dedicated server                 |
+| Cost           | Low                     | High                             |
+| Security       | Basic                   | Strong                           |
+| Administration | Individual users        | Centralized administrator        |
+| Scalability    | Small networks          | Medium to large networks         |
+| Backup         | Individual computers    | Centralized server               |
+| Performance    | Good for small networks | Better for large networks        |
+| Reliability    | Lower                   | Higher (unless the server fails) |
+
+---
+
+## Example / Code
+
+No programming code is included in this lecture.
+
+### Real-Life Example
+
+**Peer-to-Peer**
+
+A home network where family members share files directly between their laptops without a dedicated server.
+
+**Client-Server**
+
+A university network where students log in using university accounts to access shared files, printers, and internet services managed by a central server.
+
+---
+
+## Explanation
+
+### How a Network Works
+
+1. Devices are connected using cables or wireless communication.
+2. Communication protocols (such as TCP/IP) define how data is exchanged.
+3. Devices send and receive data through communication links.
+4. Shared resources become available to authorized users.
+
+### How an Internetwork Works
+
+1. Multiple independent networks exist.
+2. Routers connect these networks.
+3. Data packets are routed from one network to another.
+4. Users on different networks can communicate seamlessly.
+
+### Choosing the Right Network Type
+
+| Situation     | Recommended Network |
+| ------------- | ------------------- |
+| Home          | Peer-to-Peer        |
+| Small Office  | Peer-to-Peer        |
+| School        | Client-Server       |
+| University    | Client-Server       |
+| Bank          | Client-Server       |
+| Large Company | Client-Server       |
+
+---
+
+## Common Mistakes
+
+- Confusing a **network** with an **internetwork**.
+- Assuming a **switch** can connect different networks like a router.
+- Believing every network requires a dedicated server.
+- Thinking Peer-to-Peer networks are suitable for large organizations.
+- Ignoring the importance of centralized backup and security in Client-Server networks.
+- Confusing **clients** (request services) with **servers** (provide services).
+
+---
+
+## Short Exam Notes
+
+- **Network:** A group of interconnected devices that share resources and exchange data.
+- **Node:** Any device connected to a network (computer, printer, router, switch, etc.).
+- **Internetwork:** Two or more networks connected using **routers**.
+- **Switch:** Connects devices within the same network.
+- **Router:** Connects different networks.
+- **Main purpose of networking:** Resource sharing and communication.
+- **Peer-to-Peer:** No dedicated server; each computer acts as both client and server; best for small networks.
+- **Client-Server:** Dedicated server manages clients; provides centralized security and administration.
+- **Major network benefits:** Resource sharing, communication, centralized management, scalability, cost efficiency, security, remote access, reliability, and backup/recovery.
+- **Exam Tip:** Be able to compare **Peer-to-Peer** and **Client-Server** networks based on cost, security, scalability, administration, and reliability.
