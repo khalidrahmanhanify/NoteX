@@ -1104,6 +1104,14 @@
           {
             "title": "RIPv2 In Practice",
             "youtubeId": "XpwyNA67WGM"
+          },
+          {
+            "title": "OSPF Single Area",
+            "youtubeId": "AP6Tf3ZsmPM"
+          },
+          {
+            "title": "Inter-vlan Routing",
+            "youtubeId": "Rn5VP9fennM"
           }
         ]
       }
