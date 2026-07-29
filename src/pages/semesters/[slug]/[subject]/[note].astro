@@ -40,7 +40,7 @@ const direction = isRTL ? "rtl" : "ltr";
 <BaseLayout title={currNote.data.title}>
   <div class="note-page-wrapper">
     <DownloadPdf />
-    <BackButton path={previousPage} />
+    <BackButton path={`${previousPage}#note-grid`} />
     <article class="markdown-body container" dir={direction}>
       <Content />
     </article>
