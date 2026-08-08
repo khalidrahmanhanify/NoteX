@@ -1032,6 +1032,20 @@
             "file": "/materials/semester-3/data-structures-and-algorithms/lecture-15.pdf",
             "date": "2026-07-15"
           }
+        ],
+        "videos": [
+          {
+            "title": "Arrays Data Structure in C++",
+            "youtubeId": "hVL9dC8x-QE"
+          },
+          {
+            "title": "LinkedList Data Structure in C++",
+            "youtubeId": "EB_uFC45dl8"
+          },
+          {
+            "title": "Stack Data Structure in C++",
+            "youtubeId": "eakkup_jGFE"
+          }
         ]
       },
       {
