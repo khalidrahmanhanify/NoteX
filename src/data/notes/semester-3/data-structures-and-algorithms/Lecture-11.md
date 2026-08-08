@@ -4,7 +4,7 @@ description: Explains sequential and binary searching, their algorithms, complex
 lecture: Lecture 11
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-05-20
+date: 2026-06-24
 order: 6
 ---
 

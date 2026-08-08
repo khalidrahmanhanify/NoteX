@@ -4,7 +4,7 @@ description: Covers sorting algorithms, divide-and-conquer, Merge Sort implement
 lecture: Lecture 9
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-05-06
+date: 2026-06-10
 order: 8
 ---
 

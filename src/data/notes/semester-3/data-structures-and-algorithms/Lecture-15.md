@@ -4,7 +4,7 @@ description: Explains collision resolution, load factor, rehashing, and C++ hash
 lecture: Lecture 15
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-06-17
+date: 2026-07-22
 order: 2
 ---
 

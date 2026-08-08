@@ -4,7 +4,7 @@ description: Explains bucket arrays, hash functions, hash codes, compression fun
 lecture: lecture 14
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-06-10
+date: 2026-07-15
 order: 3
 ---
 

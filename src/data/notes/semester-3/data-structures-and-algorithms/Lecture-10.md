@@ -4,7 +4,7 @@ description: Explains three introductory sorting algorithms, their operations, c
 lecture: Lecture 10
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-05-13
+date: 2026-06-17
 order: 7
 ---
 

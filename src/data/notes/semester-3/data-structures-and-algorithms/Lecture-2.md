@@ -17,16 +17,16 @@ In modern C++, arrays are commonly implemented using **`vector` from the STL**. 
 
 ### Advantages
 
-• Dynamic size (can grow/shrink)
-• Built-in functions (push_back, size, etc.)
-• Safer than raw arrays
-• Easy to use and manage
+- Dynamic size (can grow/shrink)
+- Built-in functions (push_back, size, etc.)
+- Safer than raw arrays
+- Easy to use and manage
 
 ### Disadvantages
 
-• Slightly slower than static arrays
-• Uses extra memory
-• Less control over memory
+- Slightly slower than static arrays
+- Uses extra memory
+- Less control over memory
 
 ### ✅ Syntax
 
@@ -54,14 +54,14 @@ Insertion means adding elements into an array or vector. In vectors, insertion i
 
 ### Advantages
 
-• Easy insertion with built-in functions
-• Automatic resizing
-• Flexible positions
+- Easy insertion with built-in functions
+- Automatic resizing
+- Flexible positions
 
 ### Disadvantages
 
-• Slower for middle insertion
-• Memory reallocation overhead
+- Slower for middle insertion
+- Memory reallocation overhead
 
 ### ✅ Syntax
 
@@ -86,14 +86,14 @@ Removing elements shifts remaining elements. Vector size decreases automatically
 
 ### Advantages
 
-• Easy removal operations
-• Automatic resizing
-• Multiple removal methods
+- Easy removal operations
+- Automatic resizing
+- Multiple removal methods
 
 ### Disadvantages
 
-• Slow for large arrays (shifting)
-• Index changes after removal
+- Slow for large arrays (shifting)
+- Index changes after removal
 
 ### ✅ Syntax
 
@@ -115,9 +115,9 @@ Size means the number of elements in the array/vector. In vectors, size is obtai
 
 ### Advantages
 
-• Easy to get size
-• Always accurate
-• Useful in loops
+- Easy to get size
+- Always accurate
+- Useful in loops
 
 ### ⚠️ Correction (Improved)
 
@@ -144,15 +144,15 @@ A 2D array is an array of arrays (matrix form). In C++, it is implemented using 
 
 ### Advantages
 
-• Flexible size
-• Easy matrix representation
-• Dynamic memory
+- Flexible size
+- Easy matrix representation
+- Dynamic memory
 
 ### Disadvantages
 
-• More complex than 1D array
-• Slightly slower
-✅ Memory not fully contiguous
+- More complex than 1D array
+- Slightly slower
+  ✅ Memory not fully contiguous
 
 ### ✅ Syntax
 

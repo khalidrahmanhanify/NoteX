@@ -4,7 +4,7 @@ description: Covers graph representations, adjacency matrices, expression notati
 lecture: Lecture 12
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-05-27
+date: 2026-07-01
 order: 5
 ---
 

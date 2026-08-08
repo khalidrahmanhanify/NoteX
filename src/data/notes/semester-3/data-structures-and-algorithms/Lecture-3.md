@@ -351,9 +351,9 @@ Empty list
 
 You only studied:
 
-✔ Creating nodes
-✔ Connecting nodes
-✔ Traversing
+✔ Creating nodes  
+✔ Connecting nodes  
+✔ Traversing  
 ✔ Printing
 
 Teacher handout also includes (not deeply studied yet):
