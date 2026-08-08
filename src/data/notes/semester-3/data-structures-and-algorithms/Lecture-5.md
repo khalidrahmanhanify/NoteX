@@ -4,7 +4,7 @@ description: All about Stacks, Stack Operations, and etc.
 lecture: Lecture 5
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-04-22
+date: 2026-04-08
 order: 12
 ---
 

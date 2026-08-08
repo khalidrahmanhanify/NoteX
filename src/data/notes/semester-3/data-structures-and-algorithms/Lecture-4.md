@@ -4,7 +4,7 @@ description: Double and Circular linked lists in C++ using struct, creating node
 lecture: Lecture 4
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-04-15
+date: 2026-04-01
 order: 13
 ---
 

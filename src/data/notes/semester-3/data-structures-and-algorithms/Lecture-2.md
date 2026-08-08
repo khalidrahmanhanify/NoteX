@@ -4,7 +4,7 @@ description: All about arrays, how to create them using vectors and more.
 lecture: Lecture 2
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-04-01
+date: 2026-03-18
 order: 15
 ---
 

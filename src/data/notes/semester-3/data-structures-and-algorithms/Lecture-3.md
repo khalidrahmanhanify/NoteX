@@ -4,7 +4,7 @@ description: Singly linked lists in C++ using struct and class, creating nodes, 
 lecture: Lecture 3
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-04-08
+date: 2026-03-25
 order: 14
 ---
 

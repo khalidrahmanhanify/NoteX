@@ -4,7 +4,7 @@ description: Learn Queue data structure in Python including FIFO behavior, queue
 lecture: Lecture 6
 semester: semester-3
 subject: data-structures-and-algorithms
-date: 2026-04-29
+date: 2026-04-15
 order: 11
 ---
 
