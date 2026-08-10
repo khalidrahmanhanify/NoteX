@@ -272,7 +272,7 @@ The **division method** uses the remainder operator to convert a key or hash cod
 The formula is:
 
 $$
-h(k)=k%m
+h(k)=k \ \%  \ m
 $$
 
 where:

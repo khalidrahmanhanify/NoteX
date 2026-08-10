@@ -942,6 +942,17 @@
             "file": "/materials/semester-3/linear-algebra/lecture-14-15.pdf",
             "date": "2026-07-07"
           }
+        ],
+        "videos": [
+          {
+            "title": "Linear Algebra Part 1 | Midterm",
+            "youtubeId": "3YOLpGf26pg"
+          },
+
+          {
+            "title": "Linear Algebra Part 2 | Midterm",
+            "youtubeId": "TnTydQSLOtM"
+          }
         ]
       },
       {
