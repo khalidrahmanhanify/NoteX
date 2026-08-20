@@ -1,52 +1,140 @@
 # 🚀 NoteX
 
-[![Astro Version](https://shields.io/badge/^7.0.6-EA580C.svg?style=flat-square&logo=astro&logoColor=white)](https://astro.build)
-[![NPM](https://shields.io/badge/NPM-EA580C.svg?style=flat-square&logo=npm&logoColor=white)](https://npmjs.com)
-[![MIT License](https://shields.io/badge/MIT-EA580C.svg?style=flat-square&logo=opensourceinitiative&logoColor=white)](https://github.com)
-[![TypeScript](https://shields.io/badge/TypeScript-EA580C.svg?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![Astro Version](https://shields.io/badge/^7.0.6-EA580C.svg?style=flat-square\&logo=astro\&logoColor=white)](https://astro.build)
+[![NPM](https://shields.io/badge/NPM-EA580C.svg?style=flat-square\&logo=npm\&logoColor=white)](https://npmjs.com)
+[![MIT License](https://shields.io/badge/MIT-EA580C.svg?style=flat-square\&logo=opensourceinitiative\&logoColor=white)](https://github.com)
+[![TypeScript](https://shields.io/badge/TypeScript-EA580C.svg?style=flat-square\&logo=typescript\&logoColor=white)](https://www.typescriptlang.org)
 
-NoteX is a blazing-fast, modern markdown and math-intensive note-taking platform built atop the **Astro** framework [1]. Engineered with a core focus on exceptional developer experience and speed, it serves as a lightweight content management engine capable of transforming raw markdown thoughts into beautifully structured, production-ready static assets [1].
+**NoteX** is a modern, fast, and lightweight academic notes platform built with **Astro**. It is designed to organize university notes by semester and subject while providing a clean reading experience for technical and mathematics-heavy content.
+
+The project uses Markdown-based notes, allowing content to be written and maintained as simple files while Astro handles routing, rendering, and static site generation.
 
 ---
 
 ## ✨ Features
 
-- **⚡ Blazing Fast Architecture** – Leverages Astro’s zero-JS-by-default footprint for instantaneous page transitions [1].
-- **📝 Format Agnostic Authoring** – Native support for both `.md` and `.mdx` syntaxes, allowing embedded interactive components inside notes [1].
-- **🧮 LaTeX Math Typesetting** – Pixel-perfect mathematical layout delivery out-of-the-box handled by KaTeX engine integrations [1].
-- **🎨 Modular Extensibility** – Clean layout hierarchies using `astro-icon` and flexible custom remark/rehype configurations [1].
-- **📂 Clean Navigation Layout** – An intuitive layout hierarchy tailored directly towards continuous technical reading and note organization [1].
+* **⚡ Fast & Lightweight** — Built with Astro for efficient static page generation and minimal client-side JavaScript.
+* **📝 Markdown Notes** — Write and organize notes using Markdown files.
+* **🧩 MDX Support** — Supports MDX for notes that require interactive or reusable components.
+* **🧮 Mathematical Notation** — Supports LaTeX-style mathematical expressions through KaTeX.
+* **🎓 Semester Organization** — Notes are organized by semester and subject for easy navigation.
+* **📚 Subject-Based Structure** — Each subject has its own dedicated collection of notes and resources.
+* **🖼️ Subject Covers** — Dedicated cover images are available for subjects.
+* **🔗 Dynamic Routing** — Semester and subject pages are generated using Astro's dynamic routing system.
+* **📱 Responsive Interface** — Designed to provide a comfortable reading experience across different screen sizes.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Core Framework & Language
-* **Framework:** [Astro](https://astro.build) 🚀 [1]
-* **Language:** [TypeScript](https://typescriptlang.org) (Strictly typed configurations) [1]
-* **Styling:** CSS (Modular component-level isolation) [1]
+### Core
 
-### Key Architectural Dependencies
-* `@astrojs/mdx` — Enables rich components inside Markdown files [1].
-* `katex` & `rehype-katex` — Server-side math processing delivering quick document generation without client script bloat [1].
-* `remark-math` — Parses custom `$` and `$$` delimiters mapping structural math layout patterns [1].
-* `astro-icon` — Seamless local and global vector icon compilation footprint management [1].
+* **Framework:** [Astro](https://astro.build)
+* **Language:** [TypeScript](https://www.typescriptlang.org)
+* **Styling:** CSS
+* **Content:** Markdown / MDX
+
+### Content & Rendering
+
+* `@astrojs/mdx` — Adds MDX support to Astro.
+* `katex` — Renders mathematical expressions.
+* `remark-math` — Parses mathematical notation in Markdown.
+* `rehype-katex` — Converts parsed mathematical expressions into KaTeX-rendered HTML.
+* `astro-icon` — Provides icon support throughout the interface.
 
 ---
 
-## 📂 File Structure Overview
+## 📂 Project Structure
+
+The project is organized around semesters, subjects, and their associated notes.
 
 ```text
-.
-├── astro.config.mjs     # Primary framework middleware and rendering pipeline configuration
-├── package.json         # Automation scripts, runtime dependencies, and engine locking profiles
-├── tsconfig.json        # Unified TypeScript compiler strictness configurations
-├── public/              # Global static files (Favicons, web manifests, structural assets)
+NoteX/
 └── src/
-    ├── components/      # Reusable visual components (Navigation, Layout pieces, Cards)
-    ├── layouts/         # Base HTML structures and document wrappers
-    └── pages/           # Strict file-system-based routing layer map (Supports markdown files directly)
+    ├── assets/
+    │   └── images/
+    │       └── subjectsCovers/
+    │
+    ├── components/
+    │   └── ...
+    │
+    ├── data/
+    │   └── notes/
+    │       ├── semester-2/
+    │       │   ├── biography-of-prophet-pbuh/
+    │       │   ├── data-communication-and-networking/
+    │       │   ├── digital-logic-and-design/
+    │       │   ├── object-oriented-programming/
+    │       │   ├── principles-of-software-engineering/
+    │       │   └── worship-system-of-islam/
+    │       │
+    │       ├── semester-3/
+    │       │   ├── advance-computer-networking/
+    │       │   │   └── images/
+    │       │   ├── data-structures-and-algorithms/
+    │       │   ├── ethical-system-of-islam/
+    │       │   ├── linear-algebra/
+    │       │   ├── modern-programming-languages/
+    │       │   └── social-system-of-islam/
+    │       │
+    │       └── semester-4/
+    │           ├── database-administration/
+    │           ├── english-language/
+    │           ├── ideological-studies/
+    │           ├── operating-system-concepts/
+    │           ├── religions-and-sects/
+    │           └── web-technologies/
+    │
+    ├── icons/
+    │
+    ├── pages/
+    │   ├── semesters/
+    │   │   └── [slug]/
+    │   │       └── [subject]/
+    │   │
+    │   └── ...
+    │
+    └── styles/
 ```
+
+### Directory Overview
+
+| Directory                               | Purpose                                          |
+| --------------------------------------- | ------------------------------------------------ |
+| `src/assets/`                           | Images and other assets processed by Astro       |
+| `src/assets/images/subjectsCovers/`     | Cover images for individual subjects             |
+| `src/components/`                       | Reusable Astro/UI components                     |
+| `src/data/notes/`                       | Academic notes organized by semester and subject |
+| `src/icons/`                            | Project icons                                    |
+| `src/pages/`                            | Astro pages and dynamic routes                   |
+| `src/pages/semesters/[slug]/[subject]/` | Dynamic subject note pages                       |
+| `src/styles/`                           | Global and component-related styles              |
+
+---
+
+## 📚 Notes Organization
+
+Notes are organized hierarchically:
+
+```text
+Semester
+   ↓
+Subject
+   ↓
+Notes / Resources
+```
+
+For example:
+
+```text
+src/data/notes/
+└── semester-3/
+    └── linear-algebra/
+        ├── ...
+        └── ...
+```
+
+This structure makes it possible to keep every subject independent while still providing a consistent navigation system throughout the website.
 
 ---
 
@@ -54,78 +142,179 @@ NoteX is a blazing-fast, modern markdown and math-intensive note-taking platform
 
 ### Prerequisites
 
-Ensure your system meets the explicit engine locks before initiating the installation process:
-* **Node.js**: `v22.12.0` or higher matching local runtime constraints [1].
-* **Package Manager**: `npm` (v10.x or higher recommended) [1].
+Make sure you have the following installed:
+
+* **Node.js:** 22.x or newer
+* **npm:** 10.x or newer
+* **Git**
+
+Check your installed versions:
+
+```bash
+node --version
+npm --version
+git --version
+```
 
 ### Installation
 
-1. **Clone the repository** directly from your version control workspace:
-   ```bash
-   git clone https://github.com
-   ```
-2. **Navigate** into the contextual root directory:
-   ```bash
-   cd NoteX
-   ```
-3. **Install dependencies** cleanly using local freezing protocols:
-   ```bash
-   npm install
-   ```
+Clone the repository:
 
-### Local Development Lifecycle
-
-To trigger a live development host mapping file alterations straight into the active browser window, spin up your local server:
 ```bash
-npm run dev
+git clone https://github.com/khalidrahmanhanify/NoteX.git
 ```
-Once initialized, open your favorite web browser and point it to: **`http://localhost:4321`** [1]
+
+Navigate into the project:
+
+```bash
+cd NoteX
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
 
 ---
 
-## 📦 Production Delivery & Infrastructure Lifecycle
+## 💻 Development
 
-### Compile Production Build
-To run modern client hydration bundles and compile pure static, asset-optimized HTML pipelines, run the build command:
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+Astro will start the development server, normally available at:
+
+```text
+http://localhost:4321
+```
+
+The development server automatically reloads when files are changed.
+
+---
+
+## 🏗️ Production Build
+
+Create an optimized production build:
+
 ```bash
 npm run build
 ```
-*Compiled output assets will populate entirely inside your clean local `./dist/` distribution folder [1].*
 
-### Preview Local Production Builds
-To test server-side delivery assets, simulate caching policies, and preview performance before pushing live deployments, initialize the preview environment locally:
+The generated files will be placed in:
+
+```text
+dist/
+```
+
+---
+
+## 🔍 Preview Production Build
+
+After creating a production build, you can preview it locally:
+
 ```bash
 npm run preview
 ```
 
+This allows you to verify the production version before deployment.
+
 ---
 
-## ⚙️ Configuration Topography
+## ⚙️ Configuration
 
-Primary architectural parameters are centralized inside the project framework registry file:
-* **`astro.config.mjs`** — Houses MDX runtime plugins, KaTeX typesetting flags, security schemas, and build targets [1].
-* **`.env`** *(Optional)* — Copy from environment templates if third-party content management endpoints are configured in production [1].
+The main Astro configuration is located at:
+
+```text
+astro.config.mjs
+```
+
+Other important project configuration files include:
+
+```text
+package.json
+tsconfig.json
+```
+
+### `astro.config.mjs`
+
+Contains the Astro configuration, integrations, Markdown/MDX configuration, and other framework-level settings.
+
+### `package.json`
+
+Contains project metadata, dependencies, and npm scripts.
+
+### `tsconfig.json`
+
+Contains TypeScript compiler configuration and project-wide type-checking settings.
+
+---
+
+## 📝 Adding Notes
+
+New notes can be added to the appropriate semester and subject directory inside:
+
+```text
+src/data/notes/
+```
+
+For example, a new note for Linear Algebra would belong under:
+
+```text
+src/data/notes/semester-3/linear-algebra/
+```
+
+Keeping notes separated by semester and subject makes the content easier to maintain and allows the application to generate the appropriate pages automatically.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions keep the open-source engineering ecosystem running smoothly. Follow these exact protocols to coordinate code modifications [1]:
+Contributions are welcome.
 
-1. **Fork** the primary upstream repository [1].
-2. Initialize a local workflow branch: `git checkout -b feature/YourFeatureName` [1].
-3. Commit structural modifications following logical paths: `git commit -m 'feat: introduce interactive markdown component'` [1].
-4. Push modifications securely to remote storage: `git push origin feature/YourFeatureName` [1].
-5. Open an official **Pull Request** detailing changes against the master lifecycle branch [1].
+1. Fork the repository.
+2. Create a new branch:
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+3. Make your changes.
+4. Commit your changes:
+
+```bash
+git commit -m "feat: add new feature"
+```
+
+5. Push the branch:
+
+```bash
+git push origin feature/your-feature-name
+```
+
+6. Open a Pull Request.
 
 ---
 
 ## 📄 License
 
-This repository is distributed strictly under the terms of the open-source **MIT License** [1]. Check the structural [`LICENSE`](LICENSE) configuration profile for exact verification scopes [1].
+NoteX is distributed under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for the complete license text.
 
 ---
 
-## 👤 Contact & Community
+## 👤 Author
 
-* **Developer Workspace / Repository**: [khalidrahmanhanify/NoteX](https://github.com) [1]
+**Khalid Rahman Hanify**
+
+* GitHub: [@khalidrahmanhanify](https://github.com/khalidrahmanhanify)
+
+---
+
+## 🌟 NoteX
+
+Built to make university notes **organized, accessible, and easy to learn from.**
