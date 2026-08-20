@@ -13,7 +13,7 @@
         "teacher": "Abdulhaq Haqyar",
         "location": "Room 502",
         "day": "saturday",
-        "path": "/semester-2/biography-of-prophet-pbuh/",
+        "path": "/semesters/semester-2/biography-of-prophet-pbuh/",
         "materials": [
           {
             "title": "Course Policy",
@@ -1189,6 +1189,75 @@
             "youtubeId": "Rn5VP9fennM"
           }
         ]
+      }
+    ]
+  },
+  {
+    "semesterName": "Semester 4",
+    "slug": "semester-4",
+    "url": "semesters/semester-4",
+    "credits": 17,
+    "barColor": "rgb(44, 62, 80)",
+    "subjects": [
+      {
+        "subjectName": "Database Administration",
+        "coverImage": "../assets/images/subjectsCovers/database-administration.png",
+        "iconName": "database-2",
+        "teacher": "Muhammad Tahir",
+        "location": "406",
+        "day": "Saturday",
+        "path": "/semesters/semester-4/database-administration/",
+        "materials": []
+      },
+      {
+        "subjectName": "Ideological Studies",
+        "coverImage": "../assets/images/subjectsCovers/ideological-studies.png",
+        "iconName": "lightbulb",
+        "teacher": "Lutfullah Hamidi",
+        "location": "502",
+        "day": "Sunday",
+        "path": "/semesters/semester-4/ideological-studies/",
+        "materials": []
+      },
+      {
+        "subjectName": "Religions and Sects",
+        "coverImage": "../assets/images/subjectsCovers/religions-and-sects.png",
+        "iconName": "moon",
+        "teacher": "Lutfullah Hamidi",
+        "location": "502",
+        "day": "Sunday",
+        "path": "/semesters/semester-4/religions-and-sects/",
+        "materials": []
+      },
+      {
+        "subjectName": "Operating System Concepts",
+        "coverImage": "../assets/images/subjectsCovers/operating-system-concepts.png",
+        "iconName": "windows",
+        "teacher": "Mashal Rokhan",
+        "location": "402",
+        "day": "Monday",
+        "path": "/semesters/semester-4/operating-system-concepts/",
+        "materials": []
+      },
+      {
+        "subjectName": "Web Technologies",
+        "coverImage": "../assets/images/subjectsCovers/web-technologies.png",
+        "iconName": "javascript",
+        "teacher": "Khalilullah Akbari",
+        "location": "509",
+        "day": "Wednesday",
+        "path": "/semesters/semester-4/web-technologies/",
+        "materials": []
+      },
+      {
+        "subjectName": "English Language",
+        "coverImage": "../assets/images/subjectsCovers/english-language.png",
+        "iconName": "language",
+        "teacher": "Mohammad Mujahid Ibrahimi",
+        "location": "407",
+        "day": "Thursday",
+        "path": "/semesters/semester-4/english-language/",
+        "materials": []
       }
     ]
   }
