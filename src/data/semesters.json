@@ -1207,7 +1207,17 @@
         "location": "406",
         "day": "Saturday",
         "path": "/semesters/semester-4/database-administration/",
-        "materials": []
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-4/database-administration/course-policy.pdf"
+          },
+          {
+            "title": "Slide 1",
+            "file": "/materials/semester-4/database-administration/lecture-1.pdf",
+            "date": "2026-08-22"
+          }
+        ]
       },
       {
         "subjectName": "Ideological Studies",
