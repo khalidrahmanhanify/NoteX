@@ -385,6 +385,8 @@ Tables / Indexes / etc.
 
 **Datafile = physical file used to store database data**
 
+![Table Spaces Visualization](./images/week-1-tablespaces.png)
+
 ---
 
 # Example / Code

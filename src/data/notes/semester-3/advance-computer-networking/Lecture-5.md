@@ -8,6 +8,9 @@ date: 2026-04-03
 order: 12
 ---
 
+import { Image } from "astro:assets";
+import myPhoto from "./images/my-photo.png";
+
 # IP Routing and Routing Protocols
 
 ## Definition
@@ -80,6 +83,8 @@ There are three common types of routing:
 1. Static Routing
 2. Default Routing
 3. Dynamic Routing
+
+![A descriptive alt text](./images/routingProtocolsTypes.png)
 
 ---
 
