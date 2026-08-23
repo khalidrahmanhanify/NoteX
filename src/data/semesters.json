@@ -1220,16 +1220,6 @@
         ]
       },
       {
-        "subjectName": "Ideological Studies",
-        "coverImage": "../assets/images/subjectsCovers/ideological-studies.png",
-        "iconName": "lightbulb",
-        "teacher": "Lutfullah Hamidi",
-        "location": "502",
-        "day": "Sunday",
-        "path": "/semesters/semester-4/ideological-studies/",
-        "materials": []
-      },
-      {
         "subjectName": "Religions and Sects",
         "coverImage": "../assets/images/subjectsCovers/religions-and-sects.png",
         "iconName": "moon",
@@ -1237,6 +1227,16 @@
         "location": "502",
         "day": "Sunday",
         "path": "/semesters/semester-4/religions-and-sects/",
+        "materials": []
+      },
+      {
+        "subjectName": "Ideological Studies",
+        "coverImage": "../assets/images/subjectsCovers/ideological-studies.png",
+        "iconName": "lightbulb",
+        "teacher": "Lutfullah Hamidi",
+        "location": "502",
+        "day": "Sunday",
+        "path": "/semesters/semester-4/ideological-studies/",
         "materials": []
       },
       {
