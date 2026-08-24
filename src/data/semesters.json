@@ -1247,7 +1247,17 @@
         "location": "402",
         "day": "Monday",
         "path": "/semesters/semester-4/operating-system-concepts/",
-        "materials": []
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-4/operating-system-concepts/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1",
+            "file": "/materials/semester-4/operating-system-concepts/lecture-1.pdf",
+            "date": "2026-08-24"
+          }
+        ]
       },
       {
         "subjectName": "Web Technologies",
