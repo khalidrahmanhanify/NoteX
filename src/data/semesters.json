@@ -1217,6 +1217,12 @@
             "file": "/materials/semester-4/database-administration/lecture-1.pdf",
             "date": "2026-08-22"
           }
+        ],
+        "videos": [
+          {
+            "title": "Installing and Connecting to Oracle DB | DBA Lecture 1",
+            "youtubeId": "GkxPs7qZNPc"
+          }
         ]
       },
       {
