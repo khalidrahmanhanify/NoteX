@@ -48,8 +48,36 @@ const direction = isRTL ? "rtl" : "ltr";
 </BaseLayout>
 
 <style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+  @font-face {
+    font-family: "Amiri";
+    src: url("/fonts/Amiri/Amiri-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
 
+  @font-face {
+    font-family: "Amiri";
+    src: url("/fonts/Amiri/Amiri-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amiri";
+    src: url("/fonts/Amiri/Amiri-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Amiri";
+    src: url("/fonts/Amiri/Amiri-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+  }
   /* 1. Layout & Container */
   .note-page-wrapper {
     max-width: 850px;

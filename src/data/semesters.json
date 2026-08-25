@@ -1213,7 +1213,7 @@
             "file": "/materials/semester-4/database-administration/course-policy.pdf"
           },
           {
-            "title": "Slide 1",
+            "title": "Lecture 1",
             "file": "/materials/semester-4/database-administration/lecture-1.pdf",
             "date": "2026-08-22"
           }
@@ -1233,7 +1233,17 @@
         "location": "502",
         "day": "Sunday",
         "path": "/semesters/semester-4/religions-and-sects/",
-        "materials": []
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-4/relegions-and-sects/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1",
+            "file": "/materials/semester-4/relegions-and-sects/lecture-1.pdf",
+            "date": "2026-08-23"
+          }
+        ]
       },
       {
         "subjectName": "Ideological Studies",
@@ -1243,7 +1253,17 @@
         "location": "502",
         "day": "Sunday",
         "path": "/semesters/semester-4/ideological-studies/",
-        "materials": []
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-4/ideological-studies/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1",
+            "file": "/materials/semester-4/ideological-studies/lecture-1.pdf",
+            "date": "2026-08-23"
+          }
+        ]
       },
       {
         "subjectName": "Operating System Concepts",
@@ -1273,13 +1293,18 @@
         "location": "509",
         "day": "Wednesday",
         "path": "/semesters/semester-4/web-technologies/",
-        "materials": []
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-4/web-technologies/course-policy.pdf"
+          }
+        ]
       },
       {
         "subjectName": "English Language",
         "coverImage": "../assets/images/subjectsCovers/english-language.png",
         "iconName": "language",
-        "teacher": "Mohammad Mujahid Ibrahimi",
+        "teacher": "Farmanullah Asee",
         "location": "407",
         "day": "Thursday",
         "path": "/semesters/semester-4/english-language/",
