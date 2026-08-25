@@ -1,6 +1,5 @@
 ---
 import "@/styles/global.css";
-// import Icon from "astro-icon/components";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -9,12 +8,17 @@ import { Icon } from "astro-icon/components";
     <div class="logo">
       <a href="/">NoteX</a>
     </div>
+
     <div class="theme-toggler">
-      <!-- Desktop Theme Toggler -->
-      <button class="theme-toggle-desktop" aria-label="Toggle dark mode">
+      <button
+        class="theme-toggle-desktop"
+        type="button"
+        aria-label="Toggle dark mode"
+        aria-pressed="false"
+      >
         <div class="circle">
-          <!-- Give these a generic class for the CSS to target -->
           <Icon name="sun" class="icon icon-sun" />
+
           <Icon name="moon" class="icon icon-moon" />
         </div>
       </button>
@@ -25,73 +29,91 @@ import { Icon } from "astro-icon/components";
 <style>
   header {
     border-bottom: 1px solid var(--divider);
+
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    z-index: 99;
+
+    z-index: 999;
+
     background: var(--background);
   }
+
   header div.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 60px; /* Use min-height instead of height */
-    padding: 10px 0; /* Add vertical padding for breathing room */
+
+    min-height: 60px;
+    padding: 10px 0;
   }
 
   .logo {
     font-weight: bold;
-    white-space: nowrap; /* Prevents logo from breaking into two lines */
+    white-space: nowrap;
     font-size: 1.1rem;
+  }
+
+  .logo a {
+    text-decoration: none;
+    color: var(--text-primary);
   }
 
   .theme-toggle-desktop {
     width: 44px;
     height: 24px;
-    background-color: var(--card);
+
     position: relative;
-    border-radius: 100px;
+
+    background-color: var(--card);
+
     border: 1px solid var(--divider);
+    border-radius: 100px;
+
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    padding: 0; /* Ensures no internal padding blocks the circle */
+
+    padding: 0;
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
   }
 
   .theme-toggle-desktop .circle {
     position: absolute;
+
     top: 2px;
-    left: 2px; /* Fixed starting point */
-    height: 18px;
+    left: 2px;
+
     width: 18px;
-    background-color: var(
-      --divider
-    ); /* Contrast against the toggle background */
+    height: 18px;
+
+    background-color: var(--divider);
+
     border-radius: 50%;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Use transform for smoother movement */
+    justify-content: center;
+
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Move the circle using translateX - this is more reliable for animations */
-  :global(.dark) .circle {
+  :global(.dark) .theme-toggle-desktop .circle {
     transform: translateX(20px);
   }
 
-  /* Icon visibility */
   .icon {
-    transform: translateX(0);
-    color: var(--text-primary);
-    opacity: 1;
     width: 12px;
     height: 12px;
-    transition: 1s;
+    color: var(--text-primary);
   }
 
   .icon-moon {
     display: none;
   }
+
   .icon-sun {
     display: block;
   }
@@ -99,28 +121,68 @@ import { Icon } from "astro-icon/components";
   :global(.dark) .icon-sun {
     display: none;
   }
+
   :global(.dark) .icon-moon {
     display: block;
+  }
+
+  .theme-toggle-desktop:hover {
+    border-color: var(--accent);
+  }
+
+  .theme-toggle-desktop:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
   }
 </style>
 
 <script is:inline>
-  const html = document.documentElement;
-  const desktopButton = document.querySelector(".theme-toggle-desktop");
+  (() => {
+    const setupThemeButton = () => {
+      const button = document.querySelector(".theme-toggle-desktop");
 
-  // 1. SET INITIAL THEME
-  const savedTheme = localStorage.getItem("theme");
-  const systemPrefersDark = window.matchMedia(
-    "(prefers-color-scheme: dark)",
-  ).matches;
+      if (!button) return;
 
-  if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
-    html.classList.add("dark");
-  }
+      /*
+       * The button is replaced during navigation,
+       * so mark each new button individually.
+       */
+      if (button.dataset.themeInitialized === "true") {
+        return;
+      }
 
-  // 2. TOGGLE LOGIC
-  desktopButton?.addEventListener("click", () => {
-    const isDark = html.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
+      button.dataset.themeInitialized = "true";
+
+      const updateButtonState = () => {
+        const isDark = document.documentElement.classList.contains("dark");
+
+        button.setAttribute("aria-pressed", String(isDark));
+
+        button.setAttribute(
+          "aria-label",
+          isDark ? "Switch to light mode" : "Switch to dark mode",
+        );
+      };
+
+      updateButtonState();
+
+      button.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.toggle("dark");
+
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+
+        updateButtonState();
+      });
+    };
+
+    /*
+     * First page.
+     */
+    setupThemeButton();
+
+    /*
+     * New Nav button after every Astro navigation.
+     */
+    document.addEventListener("astro:page-load", setupThemeButton);
+  })();
 </script>

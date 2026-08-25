@@ -1,7 +1,8 @@
 ---
-import "../styles/global.css";
+import "@/styles/global.css";
 import Nav from "./Nav.astro";
-// 1. Get both sources of props
+import { ClientRouter } from "astro:transitions";
+
 const {
   frontmatter,
   title: directTitle,
@@ -9,9 +10,13 @@ const {
 } = Astro.props;
 
 const websiteName = "NoteX";
-// 2. Prioritize direct props, then frontmatter, then a default value
-const title =
-  directTitle + " | " + websiteName || frontmatter?.title || "Default Title";
+
+const title = directTitle
+  ? `${directTitle} | ${websiteName}`
+  : frontmatter?.title
+    ? `${frontmatter.title} | ${websiteName}`
+    : websiteName;
+
 const description =
   directDescription || frontmatter?.description || "Default Description";
 ---
@@ -20,16 +25,52 @@ const description =
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+
     <link rel="apple-touch-icon" href="/favicon.svg" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css"
     />
+
     <meta name="description" content={description} />
+
     <title>{title}</title>
+
+    <!--
+      Set the theme before the first paint.
+    -->
+    <script is:inline>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("theme");
+
+          if (savedTheme === "dark") {
+            document.documentElement.classList.add("dark");
+          } else if (savedTheme === "light") {
+            document.documentElement.classList.remove("dark");
+          } else {
+            const prefersDark = window.matchMedia(
+              "(prefers-color-scheme: dark)",
+            ).matches;
+
+            if (prefersDark) {
+              document.documentElement.classList.add("dark");
+            }
+          }
+        } catch {
+          // Ignore localStorage errors.
+        }
+      })();
+    </script>
+
+    <ClientRouter />
   </head>
+
   <body>
     <main class="wrapper">
       <Nav />
@@ -38,8 +79,90 @@ const description =
   </body>
 </html>
 
+<script is:inline>
+  /*
+   * =====================================================
+   * PRESERVE THEME DURING ASTRO VIEW TRANSITIONS
+   * =====================================================
+   *
+   * Astro replaces the document's root attributes during
+   * navigation. Without this, the "dark" class disappears.
+   *
+   * We copy the CURRENT theme onto the incoming document
+   * immediately before Astro swaps it.
+   */
+
+  document.addEventListener("astro:before-swap", (event) => {
+    const isDark = document.documentElement.classList.contains("dark");
+
+    event.newDocument.documentElement.classList.toggle("dark", isDark);
+  });
+  (() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    const systemDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+
+    const theme = savedTheme || (systemDark ? "dark" : "light");
+
+    document.documentElement.classList.remove("light", "dark");
+
+    document.documentElement.classList.add(theme);
+
+    document.documentElement.style.colorScheme = theme;
+  })();
+</script>
+
 <style>
   main {
     padding-top: 80px;
+  }
+</style>
+
+<style is:global>
+  /*
+   * =====================================================
+   * PAGE VIEW TRANSITION
+   * =====================================================
+   */
+
+  ::view-transition-old(root) {
+    animation: page-out 160ms ease both;
+  }
+
+  ::view-transition-new(root) {
+    animation: page-in 200ms ease both;
+  }
+
+  @keyframes page-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes page-in {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation: none;
+    }
   }
 </style>
