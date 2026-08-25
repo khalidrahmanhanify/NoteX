@@ -1,0 +1,469 @@
+---
+interface Props {
+  videos?: {
+    title: string;
+    youtubeId: string;
+  }[];
+}
+
+const { videos } = Astro.props;
+---
+
+{
+  videos && videos.length > 0 && (
+    <div class="video-section">
+      <h3 class="group-title">Video Lectures</h3>
+      <hr class="hr" />
+
+      <div class="embed-grid">
+        {videos.map((video, index) => (
+          <div class="video-container">
+            <div
+              class="video-wrapper"
+              data-video-id={video.youtubeId}
+              data-playing="false"
+            >
+              <!-- YouTube iframe -->
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0&controls=1&playsinline=1&enablejsapi=1`}
+                title={video.title}
+                loading={index < 2 ? "eager" : "lazy"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              />
+
+              <!-- Thumbnail overlay -->
+              <button
+                class="thumbnail-overlay"
+                type="button"
+                aria-label={`Play ${video.title}`}
+              >
+                <img
+                  src={`https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                  alt=""
+                  class="video-thumbnail"
+                  loading={index < 2 ? "eager" : "lazy"}
+                  decoding="async"
+                />
+
+                <!-- Custom play button -->
+                <span class="custom-play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    class="play-icon"
+                  >
+                    <path d="M8 5.14v13.72a1 1 0 0 0 1.54.84l10.29-6.86a1 1 0 0 0 0-1.68L9.54 4.3A1 1 0 0 0 8 5.14Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <div class="video-meta">
+              <span class="video-title">
+                {video.title}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+<script>
+  const YOUTUBE_ORIGIN =
+    "https://www.youtube-nocookie.com";
+
+  /*
+   * Send a command to a YouTube iframe.
+   */
+  const youtubeCommand = (
+    iframe: HTMLIFrameElement,
+    command: string,
+  ) => {
+    iframe.contentWindow?.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: command,
+        args: [],
+      }),
+      YOUTUBE_ORIGIN,
+    );
+  };
+
+  /*
+   * Pause every other currently playing video.
+   */
+  const pauseOtherVideos = (
+    currentWrapper: HTMLElement,
+  ) => {
+    const wrappers =
+      document.querySelectorAll<HTMLElement>(
+        ".video-wrapper",
+      );
+
+    wrappers.forEach((wrapper) => {
+      if (wrapper === currentWrapper) return;
+
+      if (wrapper.dataset.playing !== "true") return;
+
+      const iframe =
+        wrapper.querySelector<HTMLIFrameElement>(
+          "iframe",
+        );
+
+      const overlay =
+        wrapper.querySelector<HTMLButtonElement>(
+          ".thumbnail-overlay",
+        );
+
+      if (!iframe || !overlay) return;
+
+      /*
+       * Pause the YouTube video.
+       */
+      youtubeCommand(iframe, "pauseVideo");
+
+      wrapper.dataset.playing = "false";
+
+      /*
+       * Show the thumbnail again.
+       */
+      overlay.classList.remove("hidden");
+    });
+  };
+
+  /*
+   * Play the selected video.
+   */
+  const playVideo = (
+    wrapper: HTMLElement,
+  ) => {
+    const iframe =
+      wrapper.querySelector<HTMLIFrameElement>(
+        "iframe",
+      );
+
+    const overlay =
+      wrapper.querySelector<HTMLButtonElement>(
+        ".thumbnail-overlay",
+      );
+
+    if (!iframe || !overlay) return;
+
+    /*
+     * Pause any other playing video first.
+     */
+    pauseOtherVideos(wrapper);
+
+    /*
+     * Hide the thumbnail.
+     */
+    overlay.classList.add("hidden");
+
+    /*
+     * Start / resume the YouTube video.
+     */
+    youtubeCommand(
+      iframe,
+      "playVideo",
+    );
+
+    wrapper.dataset.playing = "true";
+  };
+
+  /*
+   * Handle custom thumbnail clicks.
+   */
+  document.addEventListener(
+    "click",
+    (event) => {
+      const target =
+        event.target as HTMLElement;
+
+      const overlay =
+        target.closest<HTMLButtonElement>(
+          ".thumbnail-overlay",
+        );
+
+      if (!overlay) return;
+
+      const wrapper =
+        overlay.closest<HTMLElement>(
+          ".video-wrapper",
+        );
+
+      if (!wrapper) return;
+
+      playVideo(wrapper);
+    },
+  );
+
+  /*
+   * Keyboard accessibility.
+   *
+   * Enter / Space also starts the video.
+   */
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      if (
+        event.key !== "Enter" &&
+        event.key !== " "
+      ) {
+        return;
+      }
+
+      const target =
+        event.target as HTMLElement;
+
+      const overlay =
+        target.closest<HTMLButtonElement>(
+          ".thumbnail-overlay",
+        );
+
+      if (!overlay) return;
+
+      event.preventDefault();
+
+      const wrapper =
+        overlay.closest<HTMLElement>(
+          ".video-wrapper",
+        );
+
+      if (!wrapper) return;
+
+      playVideo(wrapper);
+    },
+  );
+</script>
+
+<style>
+  .video-section {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .group-title {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    padding-bottom: 8px;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .hr {
+    margin-bottom: 16px;
+    border: 0;
+    border-top: 1px solid var(--divider);
+  }
+
+  .embed-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(300px, 1fr)
+    );
+    gap: 20px;
+  }
+
+  .video-container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+
+    transition:
+      border-color 0.2s,
+      transform 0.2s;
+  }
+
+  .video-container:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  /*
+   * Full-width 16:9 video area.
+   */
+  .video-wrapper {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    background: #000;
+    overflow: hidden;
+  }
+
+  /*
+   * YouTube iframe.
+   *
+   * The iframe is always present underneath
+   * the thumbnail overlay.
+   */
+  .video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+    outline: none;
+  }
+
+  /*
+   * Thumbnail overlay.
+   */
+  .thumbnail-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+
+    background: #000;
+
+    cursor: pointer;
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  /*
+   * Hide the thumbnail after the video starts.
+   *
+   * pointer-events: none is important because it allows
+   * the user to interact directly with YouTube's controls.
+   */
+  .thumbnail-overlay.hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /*
+   * YouTube thumbnail.
+   */
+  .video-thumbnail {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+  }
+
+  /*
+   * Custom play button.
+   */
+  .custom-play-button {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+      translate(-50%, -50%);
+
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+      rgb(0 0 0 / 75%);
+
+    border:
+      2px solid
+      rgb(255 255 255 / 90%);
+
+    border-radius: 50%;
+
+    color: white;
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  /*
+   * Play button hover animation.
+   */
+  .thumbnail-overlay:hover
+    .custom-play-button {
+    transform:
+      translate(-50%, -50%)
+      scale(1.08);
+
+    background:
+      rgb(0 0 0 / 90%);
+  }
+
+  /*
+   * Play icon.
+   */
+  .play-icon {
+    width: 28px;
+    height: 28px;
+
+    fill: currentColor;
+
+    margin-left: 3px;
+  }
+
+  /*
+   * Video title section.
+   */
+  .video-meta {
+    padding: 12px;
+    background: var(--card);
+  }
+
+  .video-title {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+
+    display: block;
+
+    line-height: 1.4;
+  }
+
+  /*
+   * Mobile.
+   */
+  @media (max-width: 640px) {
+    .embed-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .custom-play-button {
+      width: 56px;
+      height: 56px;
+    }
+
+    .play-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>
