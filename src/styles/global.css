@@ -98,6 +98,9 @@ body {
     color 0.2s ease;
 }
 
+.katex-display > .katex {
+  text-wrap: wrap;
+}
 /*
  * Prevent unwanted transitions during Astro page navigation.
  * The theme itself should not visually flash during navigation.

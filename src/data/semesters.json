@@ -1319,7 +1319,17 @@
         "location": "407",
         "day": "Thursday",
         "path": "/semesters/semester-4/english-language/",
-        "materials": []
+        "materials": [
+          {
+            "title": "Course Policy",
+            "file": "/materials/semester-4/english-language/course-policy.pdf"
+          },
+          {
+            "title": "Lecture 1",
+            "file": "/materials/semester-4/english-language/lecture-1.pdf",
+            "date": "2026-08-27"
+          }
+        ]
       }
     ]
   }
