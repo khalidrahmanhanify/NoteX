@@ -203,7 +203,7 @@ Examples:
 
 The lecture summarizes this distinction as user space being where applications run and kernel space being protected for system-level functions.
 
-!["Week 1 Kernel space vs. User space"](<./images/Week%201%20(kernelVsUserSpaces).jpg>)
+!["Week 1 Kernel space vs. User space"](<./images/week_1/Week 1 (kernelVsUserSpaces).jpg>)
 
 ---
 
