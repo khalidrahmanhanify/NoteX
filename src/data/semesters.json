@@ -1319,8 +1319,13 @@
           },
           {
             "title": "Lecture 2",
-            "file": "/materials/semester-4/operating-system-concepts/lecture-1.pdf",
+            "file": "/materials/semester-4/operating-system-concepts/lecture-2.pdf",
             "date": "2026-08-31"
+          },
+          {
+            "title": "Lecture 3",
+            "file": "/materials/semester-4/operating-system-concepts/lecture-3.pdf",
+            "date": "2026-09-07"
           }
         ]
       },
