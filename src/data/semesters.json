@@ -1226,6 +1226,11 @@
             "title": "Lecture 3",
             "file": "/materials/semester-4/database-administration/lecture-3.pdf",
             "date": "2026-09-05"
+          },
+          {
+            "title": "Lecture 4",
+            "file": "/materials/semester-4/database-administration/lecture-4.pdf",
+            "date": "2026-09-12"
           }
         ],
         "videos": [
@@ -1386,6 +1391,11 @@
             "title": "Lecture 2",
             "file": "/materials/semester-4/english-language/lecture-2.pdf",
             "date": "2026-09-03"
+          },
+          {
+            "title": "Lecture 3",
+            "file": "/materials/semester-4/english-language/lecture-3.pdf",
+            "date": "2026-09-10"
           }
         ]
       }
