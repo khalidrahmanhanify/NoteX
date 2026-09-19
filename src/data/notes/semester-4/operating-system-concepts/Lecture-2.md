@@ -1,6 +1,6 @@
 ---
-title: Operating System Types and Structures
-description: Types of operating systems, batch processing, multiprogramming, time-sharing, GUI-based systems, networked systems, mobile and AI-powered operating systems, and OS structures including simple, monolithic, microkernel, layered, and modular architectures
+title: Operating System Types and Architecture
+description: Types of operating systems including batch processing, multiprogramming, time-sharing, GUI-based, networked, mobile, and AI-powered systems, along with OS architectures such as simple, monolithic, and microkernel designs
 lecture: Lecture 2
 semester: semester-4
 subject: operating-system-concepts

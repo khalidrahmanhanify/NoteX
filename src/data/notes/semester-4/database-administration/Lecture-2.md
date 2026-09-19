@@ -1,6 +1,6 @@
 ---
-title: Database Administration
-description: Oracle software components, types of database users, application developers, database users, containers and PDBs, SQL*Plus commands, user creation, privileges, tablespace quotas, and schemas
+title: Oracle Users, PDBs, Privileges, and Schema Management
+description: Oracle software components, application developers and database users, multitenant architecture with CDBs and PDBs, SQL*Plus commands, user creation, authentication privileges, tablespace quotas, schemas, and object access control
 lecture: Lecture 2
 semester: semester-4
 subject: database-administration

@@ -1,6 +1,6 @@
 ---
-title: Database Administration
-description: Oracle software components, types of database users, application developers, database users, containers and PDBs, SQL*Plus commands, user creation, privileges, tablespace quotas, and schemas
+title: Oracle Transaction Control and Database User Management
+description: Oracle transaction control using COMMIT and ROLLBACK, DML operations, DELETE statements, transaction behavior, and querying database user information with the DBA_USERS data dictionary view
 lecture: Lecture 3
 semester: semester-4
 subject: database-administration

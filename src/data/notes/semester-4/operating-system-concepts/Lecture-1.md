@@ -1,6 +1,6 @@
 ---
-title: Operating System Concepts
-description: Introduction to operating systems, OS roles and functions, processes, kernel, user and kernel space, system calls, software categories, utility programs, and device drivers
+title: Operating System Fundamentals, Kernel, and System Software
+description: Introduction to operating systems, OS roles and resource management, processes, kernel and user space, system calls, system and application software, development tools, middleware, embedded and network software, utility programs, and device drivers
 lecture: Lecture 1
 semester: semester-4
 subject: operating-system-concepts

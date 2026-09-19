@@ -1,6 +1,6 @@
 ---
-title: Database Administration
-description: Introduction to database administration, database users, DBA responsibilities, Oracle Database, database storage, tablespaces, and indexes
+title: Introduction to Oracle Database Administration and Storage
+description: Introduction to database administration, Oracle Database, DBMS concepts, database users and DBA responsibilities, database security, data types, Oracle storage management, tablespaces, datafiles, and indexes
 lecture: Lecture 1
 semester: semester-4
 subject: database-administration

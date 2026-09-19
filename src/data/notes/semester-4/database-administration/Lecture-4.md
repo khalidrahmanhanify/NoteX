@@ -1,6 +1,6 @@
 ---
-title: Database Administration
-description: Oracle software components, types of database users, application developers, database users, containers and PDBs, SQL*Plus commands, user creation, privileges, tablespace quotas, and schemas
+title: SQL Number Functions and Group Functions
+description: Oracle SQL number functions including ROUND, TRUNC, and MOD, aggregate group functions such as AVG, COUNT, MAX, MIN, and SUM, DISTINCT with group functions, GROUP BY, multiple-column grouping, and HAVING for filtering groups
 lecture: Lecture 4
 semester: semester-4
 subject: database-administration

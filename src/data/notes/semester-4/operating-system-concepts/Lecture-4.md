@@ -1,6 +1,6 @@
 ---
-title: Operating System Types and Structures
-description: OS structures including simple, monolithic, microkernel, layered, and modular architectures
+title: Spooling, Processes, Threads, and Process Management
+description: Spooling and buffering, process management foundations, processes and programs, threads, process states and transitions, and Process Control Block (PCB)
 lecture: Lecture 4
 semester: semester-4
 subject: operating-system-concepts
