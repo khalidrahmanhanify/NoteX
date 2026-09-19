@@ -1,6 +1,6 @@
 ---
-title: English Tenses
-description: Introduction to English tenses, including Simple Present, Present Continuous, Simple Past, Past Continuous, Present Perfect, and Present Perfect Continuous
+title: Time Management, Planning, Prioritization, and the Eisenhower Matrix
+description: Understanding time management, activity planning, task prioritization, scheduling, goal setting, avoiding procrastination, managing distractions, and using the Eisenhower Matrix to organize tasks effectively
 lecture: Lecture 3
 semester: semester-4
 subject: english-language

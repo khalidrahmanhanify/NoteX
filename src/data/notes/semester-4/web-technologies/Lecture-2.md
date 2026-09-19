@@ -1,11 +1,11 @@
 ---
-title: Web Technologies
-description: Introduction to JavaScript, its history, applications, variables, conditional statements, arrays, loops, functions, operators, and array methods
+title: JavaScript Operators, Functions, Rest/Spread, and Array Methods
+description: Understanding the ternary operator, JavaScript functions and arrow functions, rest and spread operators, and essential array methods for manipulating and processing data
 lecture: Lecture 2
 semester: semester-4
 subject: web-technologies
 date: 2026-09-02
-order: 15
+order: 13
 ---
 
 # JavaScript Operators, Functions, Rest/Spread, and Array Methods

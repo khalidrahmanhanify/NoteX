@@ -1,6 +1,6 @@
 ---
-title: English Tenses
-description: Introduction to English tenses, including Simple Present, Present Continuous, Simple Past, Past Continuous, Present Perfect, and Present Perfect Continuous
+title: English Tenses: Present and Past Tense Foundations
+description: Understanding the first six English tenses, including Simple Present, Present Continuous, Simple Past, Past Continuous, Present Perfect, and Present Perfect Continuous, with their structures, uses, auxiliary verbs, and common mistakes
 lecture: Lecture 1
 semester: semester-4
 subject: english-language

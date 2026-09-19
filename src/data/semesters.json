@@ -1223,7 +1223,7 @@
             "date": "2026-08-29"
           },
           {
-            "title": "Lecture 3",
+            "title": "Lecture 3 (ONLY PRACTICED NO SLIDE)",
             "file": "/materials/semester-4/database-administration/lecture-3.pdf",
             "date": "2026-09-05"
           },
@@ -1231,6 +1231,11 @@
             "title": "Lecture 4",
             "file": "/materials/semester-4/database-administration/lecture-4.pdf",
             "date": "2026-09-12"
+          },
+          {
+            "title": "Lecture 5",
+            "file": "/materials/semester-4/database-administration/lecture-5.pdf",
+            "date": "2026-09-19"
           }
         ],
         "videos": [
@@ -1371,6 +1376,16 @@
             "title": "Lecture 2",
             "file": "/materials/semester-4/web-technologies/lecture-2.pdf",
             "date": "2026-09-02"
+          },
+          {
+            "title": "Lecture 3",
+            "file": "/materials/semester-4/web-technologies/lecture-3.pdf",
+            "date": "2026-09-09"
+          },
+          {
+            "title": "Lecture 4",
+            "file": "/materials/semester-4/web-technologies/lecture-4.pdf",
+            "date": "2026-09-16"
           }
         ],
         "videos": [
@@ -1411,6 +1426,11 @@
             "title": "Lecture 3",
             "file": "/materials/semester-4/english-language/lecture-3.pdf",
             "date": "2026-09-10"
+          },
+          {
+            "title": "Lecture 4",
+            "file": "/materials/semester-4/english-language/lecture-4.pdf",
+            "date": "2026-09-17"
           }
         ]
       }

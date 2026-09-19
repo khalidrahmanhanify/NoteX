@@ -1,6 +1,6 @@
 ---
-title: English Tenses
-description: Introduction to English tenses, including Simple Present, Present Continuous, Simple Past, Past Continuous, Present Perfect, and Present Perfect Continuous
+title: Future and Perfect Tenses, Sentence Structure, and Punctuation
+description: Understanding future and perfect tenses, sentence and clause structure, simple, compound, and complex sentences, punctuation rules, run-ons and comma splices, and capitalization
 lecture: Lecture 2
 semester: semester-4
 subject: english-language
