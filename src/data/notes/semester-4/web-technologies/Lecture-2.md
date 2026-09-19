@@ -5,7 +5,7 @@ lecture: Lecture 2
 semester: semester-4
 subject: web-technologies
 date: 2026-09-02
-order: 13
+order: 15
 ---
 
 # JavaScript Operators, Functions, Rest/Spread, and Array Methods
