@@ -1260,27 +1260,32 @@
         "materials": [
           {
             "title": "Course Policy",
-            "file": "/materials/semester-4/relegions-and-sects/course-policy.pdf"
+            "file": "/materials/semester-4/religions-and-sects/course-policy.pdf"
           },
           {
             "title": "Lecture 1",
-            "file": "/materials/semester-4/relegions-and-sects/lecture-1.pdf",
+            "file": "/materials/semester-4/religions-and-sects/lecture-1.pdf",
             "date": "2026-08-23"
           },
           {
             "title": "Lecture 2",
-            "file": "/materials/semester-4/relegions-and-sects/lecture-2.pdf",
+            "file": "/materials/semester-4/religions-and-sects/lecture-2.pdf",
             "date": "2026-08-30"
           },
           {
             "title": "Lecture 3",
-            "file": "/materials/semester-4/relegions-and-sects/lecture-3.pdf",
+            "file": "/materials/semester-4/religions-and-sects/lecture-3.pdf",
             "date": "2026-09-06"
           },
           {
             "title": "Lecture 4",
-            "file": "/materials/semester-4/relegions-and-sects/lecture-4.pdf",
+            "file": "/materials/semester-4/religions-and-sects/lecture-4.pdf",
             "date": "2026-09-13"
+          },
+          {
+            "title": "Lecture 5",
+            "file": "/materials/semester-4/religions-and-sects/lecture-5.pdf",
+            "date": "2026-09-20"
           }
         ]
       },
@@ -1316,6 +1321,11 @@
             "title": "Lecture 4",
             "file": "/materials/semester-4/ideological-studies/lecture-4.pdf",
             "date": "2026-09-13"
+          },
+          {
+            "title": "Lecture 5",
+            "file": "/materials/semester-4/ideological-studies/lecture-5.pdf",
+            "date": "2026-09-20"
           }
         ]
       },
