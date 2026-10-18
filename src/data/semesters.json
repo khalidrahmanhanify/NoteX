@@ -1471,6 +1471,16 @@
             "title": "Lecture 6",
             "file": "/materials/semester-4/web-technologies/lecture-6.pdf",
             "date": "2026-09-30"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-4/web-technologies/lecture-7.pdf",
+            "date": "2026-10-07"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-4/web-technologies/lecture-8.pdf",
+            "date": "2026-10-14"
           }
         ],
         "videos": [
@@ -1526,6 +1536,16 @@
             "title": "Lecture 6",
             "file": "/materials/semester-4/english-language/lecture-6.pdf",
             "date": "2026-10-01"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-4/english-language/lecture-7.pdf",
+            "date": "2026-10-08"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-4/english-language/lecture-8.pdf",
+            "date": "2026-10-15"
           }
         ]
       }
