@@ -1241,6 +1241,16 @@
             "title": "Lecture 6",
             "file": "/materials/semester-4/database-administration/lecture-6.pdf",
             "date": "2026-09-26"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-4/database-administration/lecture-7.pdf",
+            "date": "2026-10-03"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-4/database-administration/lecture-8.pdf",
+            "date": "2026-10-10"
           }
         ],
         "videos": [
@@ -1296,6 +1306,16 @@
             "title": "Lecture 6",
             "file": "/materials/semester-4/religions-and-sects/lecture-6.pdf",
             "date": "2026-09-27"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-4/religions-and-sects/lecture-7.pdf",
+            "date": "2026-10-04"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-4/religions-and-sects/lecture-8.pdf",
+            "date": "2026-10-11"
           }
         ]
       },
@@ -1341,6 +1361,16 @@
             "title": "Lecture 6",
             "file": "/materials/semester-4/ideological-studies/lecture-6.pdf",
             "date": "2026-09-27"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-4/ideological-studies/lecture-7.pdf",
+            "date": "2026-10-04"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-4/ideological-studies/lecture-8.pdf",
+            "date": "2026-10-11"
           }
         ]
       },
@@ -1381,6 +1411,21 @@
             "title": "Lecture 5",
             "file": "/materials/semester-4/operating-system-concepts/lecture-5.pdf",
             "date": "2026-09-21"
+          },
+          {
+            "title": "Lecture 6",
+            "file": "/materials/semester-4/operating-system-concepts/lecture-6.pdf",
+            "date": "2026-09-28"
+          },
+          {
+            "title": "Lecture 7",
+            "file": "/materials/semester-4/operating-system-concepts/lecture-7.pdf",
+            "date": "2026-10-05"
+          },
+          {
+            "title": "Lecture 8",
+            "file": "/materials/semester-4/operating-system-concepts/lecture-8.pdf",
+            "date": "2026-10-12"
           }
         ]
       },
